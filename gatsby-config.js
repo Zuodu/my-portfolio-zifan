@@ -23,6 +23,22 @@ module.exports = {
     }, */
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
+		'gatsby-plugin-netlify',
+		{
+			resolve: 'gatsby-plugin-web-font-loader',
+			options: {
+				google: {
+					families: ['Montserrat', 'Domine']
+				}
+			}
+		},
+		{
+			resolve: 'gatsby-plugin-i18n',
+			options: {
+				langKeyDefault: 'fr',
+				useLangKeyLayout: false
+			}
+		},
 		{
 			resolve: 'gatsby-source-graphql',
 			options: {
@@ -71,7 +87,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'starter',
+				short_name: 'zifan',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,

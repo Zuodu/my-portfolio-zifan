@@ -1,35 +1,30 @@
 module.exports = {
-	defaultTitle: 'John Doe',
+	defaultTitle: 'Zifan Yao - Software Engineer',
 	logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
-	author: 'John Doe',
-	url: 'https://portfolio.smakosh.com',
-	legalName: 'John Doe',
-	defaultDescription: 'I’m John and I’m a Backend & Devops engineer!',
+	author: 'Zifan Yao',
+	url: 'https://zifan.fr',
+	legalName: 'Zifan Yao',
+	defaultDescription: 'Software Engineer gratuated from INSA Lyon',
 	socialLinks: {
-		twitter: 'http://www.twitter.com/smakosh',
-		github: 'https://github.com/smakosh',
-		linkedin: 'https://www.linkedin.com/in/ismail-ghallou-630149122/',
-		instagram: 'https://instagram.com/smakosh19',
-		youtube: 'https://www.youtube.com/user/smakoshthegamer',
-		google: 'https://plus.google.com/u/0/+IsmailSmakoshGhallou',
+		github: 'https://github.com/zuodu',
+		linkedin: 'https://www.linkedin.com/in/zifan-yao',
 	},
-	googleAnalyticsID: 'UA-88875900-4',
-	themeColor: '#6b63ff',
-	backgroundColor: '#6b63ff',
+	googleAnalyticsID: 'UA-147839131-1',
+	themeColor: '#51bfff',
+	backgroundColor: '#e5e4ec',
 	social: {
-		facebook: 'appId',
-		twitter: '@smakosh',
+		linkedin: 'zifan-yao',
+		github: 'zuodu',
 	},
 	address: {
-		city: 'City',
-		region: 'Region',
-		country: 'Country',
-		zipCode: 'ZipCode',
+		city: 'Bergerac',
+		region: 'Aquitaire',
+		country: 'France',
+		zipCode: '24100',
 	},
 	contact: {
-		email: 'email',
-		phone: 'phone number',
+		email: 'contact@zifan.fr'
 	},
 	foundingDate: '2018',
-	recaptcha_key: '6Lcs6lQUAAAAAEwhNH2IsobIe2csdda4TU3efpMN'
+	recaptcha_key: '6LfwLLgUAAAAALOospFdt7wFH00PPTEO_WR8PRL-'
 }
