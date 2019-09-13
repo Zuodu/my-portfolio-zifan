@@ -1,6 +1,6 @@
 module.exports = {
 	defaultTitle: 'Zifan Yao - Software Engineer',
-	logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+	logo: 'https://zifan.fr/favicon/favicon-512.png',
 	author: 'Zifan Yao',
 	url: 'https://zifan.fr',
 	legalName: 'Zifan Yao',
