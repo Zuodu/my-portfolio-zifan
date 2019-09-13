@@ -14,6 +14,7 @@ module.exports = {
 		'react/no-danger': 0,
 		'no-multi-spaces': 0,
 		'jsx-a11y/anchor-has-content': 0,
+		'jsx-a11y/img-redundant-alt': 0,
 		'jsx-a11y/label-has-for': 0,
 		'jsx-a11y/no-static-element-interactions': 0,
 		'arrow-body-style': 0,
