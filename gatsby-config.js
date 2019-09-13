@@ -21,7 +21,6 @@ module.exports = {
         path: '${__dirname}/src/assets',
       },
     }, */
-		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-netlify',
 		{
@@ -81,18 +80,6 @@ module.exports = {
 					yandex: false,
 					windows: false,
 				},
-			},
-		},
-		{
-			resolve: 'gatsby-plugin-manifest',
-			options: {
-				name: config.defaultTitle,
-				short_name: 'zifan',
-				start_url: '/',
-				background_color: config.backgroundColor,
-				theme_color: config.themeColor,
-				display: 'minimal-ui',
-				icon: './static/favicon/favicon-512.png',
 			},
 		},
 		'gatsby-plugin-offline',
