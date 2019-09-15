@@ -26,5 +26,7 @@ module.exports = {
 		email: 'contact@zifan.fr'
 	},
 	foundingDate: '2019',
-	recaptcha_key: '6LeXLrgUAAAAAGx23B5NbD-DYNRnSph_EMXk9dpv'
+	recaptcha_key: '6LeXLrgUAAAAAGx23B5NbD-DYNRnSph_EMXk9dpv',
+	langs: ['fr', 'en'],
+	defaultLangKey: 'fr'
 }

@@ -9,6 +9,10 @@ module.exports = {
 	siteMetadata: {
 		title: config.defaultTitle,
 		description: config.defaultDescription,
+		languages: {
+			langs: config.langs,
+			defaultLangKey: config.defaultLangKey
+		},
 		author: config.author,
 	},
 	plugins: [
@@ -35,8 +39,10 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-i18n',
 			options: {
-				langKeyDefault: 'fr',
-				useLangKeyLayout: false
+				useLangKeyLayout: true,
+				langKeyForNull: 'any',
+				langKeyDefault: config.defaultLangKey,
+				prefixDefault: true,
 			}
 		},
 		{
@@ -90,9 +96,11 @@ module.exports = {
 				alias: {
 					Components: path.resolve(__dirname, 'src/components'),
 					Common: path.resolve(__dirname, 'src/components/common'),
+					Layout: path.resolve(__dirname, 'src/components/common/Layout'),
 					Static: path.resolve(__dirname, 'static/'),
 					Theme: path.resolve(__dirname, 'src/components/theme'),
 					Data: path.resolve(__dirname, 'data/config'),
+					I18n: path.resolve(__dirname, 'src/i18n')
 				},
 			},
 		}
