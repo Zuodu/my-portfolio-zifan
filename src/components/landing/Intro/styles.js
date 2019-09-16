@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	padding-bottom: 4rem;
-	background-image: url('../illustrations/overlay.svg');
 	background-size: contain;
 	background-position: right top;
 	background-repeat: no-repeat;
@@ -39,7 +38,7 @@ export const Details = styled.div`
 
 	h4 {
 		margin-bottom: 2.5rem;
-		font-size: 32pt;
+		font-size: 26pt;
 		font-weight: normal;
 		color: #707070;
 
@@ -57,6 +56,7 @@ export const Thumbnail = styled.div`
 	}
 
 	img {
+		margin-left: 15%;
 		width: 100%;
 	}
 `

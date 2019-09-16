@@ -32,7 +32,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-web-font-loader',
 			options: {
 				google: {
-					families: ['Montserrat', 'Domine']
+					families: ['Arvo:400,700', 'Cabin:400,700']
 				}
 			}
 		},
@@ -95,6 +95,8 @@ module.exports = {
 			options: {
 				alias: {
 					Components: path.resolve(__dirname, 'src/components'),
+					Themes: path.resolve(__dirname, 'src/themes'),
+					Utils: path.resolve(__dirname, 'src/utils'),
 					Common: path.resolve(__dirname, 'src/components/common'),
 					Layout: path.resolve(__dirname, 'src/components/common/Layout'),
 					Static: path.resolve(__dirname, 'static/'),

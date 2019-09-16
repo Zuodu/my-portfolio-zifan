@@ -1,13 +1,11 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Header } from 'Theme'
 import { Container, Button } from 'Common'
-import dev from 'Static/illustrations/dev.svg'
+import nerd from 'Static/illustrations/nerd.svg'
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles'
 
 export const Intro = () => (
 	<Wrapper>
-		<Header />
 		<IntroWrapper as={Container}>
 			<Details>
 				<h1>Bonjour !</h1>
@@ -17,7 +15,7 @@ export const Intro = () => (
 				</Button>
 			</Details>
 			<Thumbnail>
-				<img src={dev} alt="Place fun picture here !" />
+				<img src={nerd} alt="Place fun picture here !" />
 			</Thumbnail>
 		</IntroWrapper>
 	</Wrapper>

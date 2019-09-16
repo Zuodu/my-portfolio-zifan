@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const Global = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Cabin', Helvetica, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 
@@ -198,24 +198,13 @@ export const Global = createGlobalStyle`
     }
     img {
       max-width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     h1 {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+    	font-family: 'Arvo', Futura, sans-serif;
+      padding: 0;
+      margin: 0 0 1.45rem;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -223,14 +212,9 @@ export const Global = createGlobalStyle`
       line-height: 1.1;
     }
     h2 {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      font-family: 'Arvo', Futura, sans-serif;
+      padding: 0;
+      margin: 0 0 1.45rem;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -238,14 +222,9 @@ export const Global = createGlobalStyle`
       line-height: 1.1;
     }
     h3 {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+    	font-family: 'Arvo', Futura, sans-serif;
+      padding: 0;
+      margin: 0 0 1.45rem;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -253,14 +232,9 @@ export const Global = createGlobalStyle`
       line-height: 1.1;
     }
     h4 {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+    	font-family: 'Arvo', Futura, sans-serif;
+      padding: 0;
+      margin: 0 0 1.45rem;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -268,14 +242,9 @@ export const Global = createGlobalStyle`
       line-height: 1.1;
     }
     h5 {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+    	font-family: 'Arvo', Futura, sans-serif;
+      padding: 0;
+      margin: 0 0 1.45rem;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -283,14 +252,9 @@ export const Global = createGlobalStyle`
       line-height: 1.1;
     }
     h6 {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+    	font-family: 'Arvo', Futura, sans-serif;
+      padding: 0;
+      margin: 0 0 1.45rem;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -298,88 +262,39 @@ export const Global = createGlobalStyle`
       line-height: 1.1;
     }
     hgroup {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     ul {
-      margin-left: 1.45rem;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem 1.45rem;
       list-style-position: outside;
       list-style-image: none;
     }
     ol {
-      margin-left: 1.45rem;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem 1.45rem;
       list-style-position: outside;
       list-style-image: none;
     }
     dl {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     dd {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     p {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     figure {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     pre {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      margin: 0 0 1.45rem;
       font-size: 0.85rem;
       line-height: 1.42;
       background: hsla(0, 0%, 0%, 0.04);
@@ -389,91 +304,43 @@ export const Global = createGlobalStyle`
       padding: 1.45rem;
     }
     table {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
       font-size: 1rem;
       line-height: 1.45rem;
       border-collapse: collapse;
       width: 100%;
     }
     fieldset {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     blockquote {
-      margin-left: 1.45rem;
-      margin-right: 1.45rem;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 1.45rem 1.45rem;
     }
     form {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     noscript {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     iframe {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     hr {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: calc(1.45rem - 1px);
+      padding: 0;
+      margin: 0 0 calc(1.45rem - 1px);
       background: hsla(0, 0%, 0%, 0.2);
       border: none;
       height: 1px;
     }
     address {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      margin-bottom: 1.45rem;
+      padding: 0;
+      margin: 0 0 1.45rem;
     }
     b {
       font-weight: bold;
@@ -554,10 +421,7 @@ export const Global = createGlobalStyle`
       -moz-font-feature-settings: 'tnum';
       -ms-font-feature-settings: 'tnum';
       -webkit-font-feature-settings: 'tnum';
-      padding-left: 0.96667rem;
-      padding-right: 0.96667rem;
-      padding-top: 0.725rem;
-      padding-bottom: calc(0.725rem - 1px);
+      padding: 0.725rem 0.96667rem calc(0.725rem - 1px);
     }
     th:first-child,
     td:first-child {
@@ -573,9 +437,7 @@ export const Global = createGlobalStyle`
       border-radius: 3px;
       font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
         'Liberation Mono', Menlo, Courier, monospace;
-      padding: 0;
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
+      padding: 0.2em 0;
     }
     pre code {
       background: none;
@@ -602,8 +464,9 @@ export const Global = createGlobalStyle`
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', Helvetica, sans-serif;
-      color: hsla(0, 0%, 0%, 0.8);
+      font-family: 'Arvo', Helvetica, sans-serif;
+      background-color: ${ props => props.theme.backgroundColor };
+      color: ${ props => props.theme.textColor };
       font-weight: normal;
       word-wrap: break-word;
       font-kerning: normal;

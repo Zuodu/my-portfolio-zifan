@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	background: transparent;
+	background-size: contain;
+	background: ${ props => props.theme.backgroundColor };
 	width: 100%;
+	box-shadow: 0 5px 5px -5px #333;
 `
 
 export const Overlay = styled.div`

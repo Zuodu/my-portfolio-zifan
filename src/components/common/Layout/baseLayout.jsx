@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState, Suspense } from 'react'
 import { IntlProvider } from 'react-intl'
 import PropTypes from 'prop-types'
+import { ThemeProvider } from 'styled-components'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
 import { StaticQuery, graphql } from 'gatsby'
-import { Footer } from 'Theme'
-import { Global } from './styles'
-import './fonts.css'
-
+import { Footer, Header, Loading } from 'Common'
+import lightTheme from 'Themes/light'
+import darkTheme from 'Themes/dark'
+import { GlobalStyle } from './styles'
 
 export const BaseLayout = ({ children, location, i18nMessages }) => {
-	console.log(children);
+	const storedDarkMode = localStorage.getItem("darkMode");
+	const [isDarkMode, setIsDarkMode] = useState(storedDarkMode === "true");
 	return (
 		<StaticQuery
 			query={graphql`
@@ -25,26 +27,34 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
         }
       `}
 			render={data => {
-				const url = location.pathname;
-				const { langs, defaultLangKey } = data.site.siteMetadata.languages;
-				const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+				const url = location.pathname
+				const {langs, defaultLangKey} = data.site.siteMetadata.languages
+				const langKey = getCurrentLangKey(langs, defaultLangKey, url)
 				const homeLink = `/${langKey}`.replace(`/${defaultLangKey}/`, '/')
 				const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({
 					...item,
 					link: item.link.replace(`/${defaultLangKey}/`, '/'),
-				}));
+				}))
+				console.log(`base/ isDarkmode : ${isDarkMode}`)
 				return (
 					<IntlProvider locale={langKey} messages={i18nMessages}>
-						<Global />
-						{ children }
-						<Footer />
+						<Suspense fallback={<Loading />}>
+							<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+								<div>
+									<GlobalStyle />
+									<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} />
+									{children}
+									<Footer />
+								</div>
+							</ThemeProvider>
+						</Suspense>
 					</IntlProvider>
 				)
 			}}
 		/>
-	);
-};
+	)
+}
 
 BaseLayout.propTypes = {
-	children: PropTypes.array,
+	children: PropTypes.array
 }
