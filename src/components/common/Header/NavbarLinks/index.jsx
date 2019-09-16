@@ -1,23 +1,23 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Button } from 'Common'
+import { Box, Button } from 'rendition'
 import { Wrapper } from './styles'
 
 
-const NavbarLinks = ({desktop, getDarkMode, setDarkMode}) => (
+const NavbarLinks = ({ desktop, getDarkMode, setDarkMode }) => (
 	<Wrapper desktop={desktop}>
 		<AnchorLink href="#about">About</AnchorLink>
 		<AnchorLink href="#projects">Projects</AnchorLink>
 		<AnchorLink href="#contact">Contact</AnchorLink>
-		<Button
-			onClick={() => {
-				console.log(`navbarlink/ getDarkMode: ${getDarkMode}`)
-				setDarkMode(!getDarkMode);
-				localStorage.setItem("darkMode", !getDarkMode);
-			}}
+		<Button onClick={() => {
+			setDarkMode(!getDarkMode)
+			localStorage.setItem('darkMode', !getDarkMode)
+		}}
+		primary
 		>
 			Dark mode
 		</Button>
+		<Button secondary>Hello</Button>
 	</Wrapper>
 )
 

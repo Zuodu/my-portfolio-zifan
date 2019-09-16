@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Headroom from 'react-headroom'
+import { Box } from 'rendition'
 import Navbar from './Navbar'
 import Hamburger from './Hamburger'
 import Sidebar from './Sidebar'
@@ -11,10 +12,12 @@ export const Header = ({getDarkMode, setDarkMode}) => {
 	return (
 		<Headroom>
 			<Wrapper>
-				<Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
-				<Navbar getDarkMode={getDarkMode} setDarkMode={setDarkMode} />
-				<Hamburger sidebar={sidebar} toggle={toggle} />
-				<Sidebar sidebar={sidebar} toggle={toggle} />
+				<Box bg='background.main'>
+					<Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
+					<Navbar getDarkMode={getDarkMode} setDarkMode={setDarkMode} />
+					<Hamburger sidebar={sidebar} toggle={toggle} />
+					<Sidebar sidebar={sidebar} toggle={toggle} />
+				</Box>
 			</Wrapper>
 		</Headroom>
 	)

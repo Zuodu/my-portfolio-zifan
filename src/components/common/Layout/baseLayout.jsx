@@ -2,16 +2,19 @@ import React, { useState, Suspense } from 'react'
 import { IntlProvider } from 'react-intl'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
+import { useTheme, Provider } from 'rendition'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
 import { StaticQuery, graphql } from 'gatsby'
 import { Footer, Header, Loading } from 'Common'
 import lightTheme from 'Themes/light'
 import darkTheme from 'Themes/dark'
 import { GlobalStyle } from './styles'
+import light from '../../../themes/light'
 
 export const BaseLayout = ({ children, location, i18nMessages }) => {
-	const storedDarkMode = localStorage.getItem("darkMode");
-	const [isDarkMode, setIsDarkMode] = useState(storedDarkMode === "true");
+	const storedDarkMode = localStorage.getItem('darkMode')
+	const [isDarkMode, setIsDarkMode] = useState(storedDarkMode === 'true')
+	const theme = useTheme()
 	return (
 		<StaticQuery
 			query={graphql`
@@ -28,7 +31,7 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
       `}
 			render={data => {
 				const url = location.pathname
-				const {langs, defaultLangKey} = data.site.siteMetadata.languages
+				const { langs, defaultLangKey } = data.site.siteMetadata.languages
 				const langKey = getCurrentLangKey(langs, defaultLangKey, url)
 				const homeLink = `/${langKey}`.replace(`/${defaultLangKey}/`, '/')
 				const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({
@@ -40,13 +43,14 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
 					<IntlProvider locale={langKey} messages={i18nMessages}>
 						<Suspense fallback={<Loading />}>
 							<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-								<div>
+								<Provider theme={isDarkMode ? darkTheme : lightTheme}>
 									<GlobalStyle />
 									<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} />
 									{children}
 									<Footer />
-								</div>
+								</Provider>
 							</ThemeProvider>
+
 						</Suspense>
 					</IntlProvider>
 				)
@@ -56,5 +60,5 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
 }
 
 BaseLayout.propTypes = {
-	children: PropTypes.array
+	children: PropTypes.array,
 }

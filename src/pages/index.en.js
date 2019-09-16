@@ -5,7 +5,6 @@ import { Intro, Skills, Contact, Projects } from 'Components/landing'
 
 export default (props) => (
 	<LayoutEn location={props.location}>
-		<span>English</span>
 		<SEO />
 		<Intro />
 		<Projects />

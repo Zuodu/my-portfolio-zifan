@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	background-size: contain;
-	background: ${ props => props.theme.backgroundColor };
+	background: transparent;
 	width: 100%;
 	box-shadow: 0 5px 5px -5px #333;
 `

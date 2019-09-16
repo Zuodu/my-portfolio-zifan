@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -465,8 +465,8 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       font-family: 'Arvo', Helvetica, sans-serif;
-      background-color: ${ props => props.theme.backgroundColor };
-      color: ${ props => props.theme.textColor };
+      background-color: ${props => props.theme.colors.background};
+      color: ${props => props.theme.colors.text.main};
       font-weight: normal;
       word-wrap: break-word;
       font-kerning: normal;
