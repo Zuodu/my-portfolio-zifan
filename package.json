@@ -43,6 +43,7 @@
     "rendition": "^11.16.2",
     "styled-components": "^4.3.2",
     "styled-loaders-react": "^1.0.1",
+    "styled-system": "^5.1.2",
     "yup": "^0.26.6"
   },
   "keywords": [
