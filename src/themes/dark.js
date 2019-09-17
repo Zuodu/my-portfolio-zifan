@@ -1,9 +1,9 @@
 import { px } from 'styled-system';
 
-const primary = '#00AEEF';
-const secondary = '#2A506F';
-const tertiary = '#527699';
-const quartenary = '#DDE1f0';
+const primary = '#0a91ab';
+const secondary = '#ffc045';
+const tertiary = '#d7dfe1';
+const quartenary = '#0a91ab';
 
 const danger = '#FF423D';
 const warning = '#FCA321';
@@ -12,40 +12,38 @@ const info = '#1496E1';
 
 const colors = {
 	background: {
-		main: '#0f1230',
-		light: '#20324f',
-		dark: '#0f1225'
+		main: '#1d2331',
+		light: 'rgba(40,46,61,0.71)',
+		dark: '#0b1a2a'
 	},
 	text: {
-		main: '#f4f4f4',
-		light: '#f3f7fc',
-		dark: '#6b6e70',
+		main: '#e4e4e4',
+		light: '#cdcdcd',
+		dark: '#dedede',
 	},
-	white: '#fff',
 	primary: {
 		main: primary,
-		semilight: '#aedff9',
-		light: '#08bcff',
-		dark: '#009dd7',
+		semilight: '#0ac6e1',
+		light: '#0aa6c1',
+		dark: '#09667b',
 	},
 	secondary: {
 		main: secondary,
-		semilight: '#abb9c5',
-		light: '#2e587a',
-		dark: '#23445e',
+		semilight: '#bbdeff',
+		light: '#3192FA',
+		dark: secondary,
 	},
 	tertiary: {
 		main: tertiary,
-		light: '#5b82a7',
-		semilight: '#bbc8d6',
-		dark: '#456482',
+		light: '#ffe27c',
+		semilight: '#d7dfe1',
+		dark: '#d7dfe1',
 	},
 	quartenary: {
 		main: quartenary,
-		light: '#f8f9fd',
-		dark: '#b7bed3',
+		light: quartenary,
+		dark: '#0a6273',
 	},
-
 	danger: {
 		main: danger,
 		semilight: '#ffa1a1',
@@ -89,11 +87,10 @@ const colors = {
 	statusInactive: {
 		main: '#d3d6db',
 	},
-
 	gray: {
-		main: '#c6c8c9',
-		light: '#f4f4f4',
-		dark: '#9f9f9f',
+		main: '#222831',
+		light: '#303841',
+		dark: '#0a0e15',
 	},
 };
 
@@ -103,25 +100,26 @@ const emphasizedControlHeight = 48;
 export const breakpoints = [576, 768, 992, 1200];
 
 export const space = [
-	0,
-	4,
-	8,
-	16,
+	2,
+	6,
+	12,
+	20,
 	defaultControlHeight,
 	emphasizedControlHeight,
 	128,
 ];
 
-export const fontSizes = [16, 18, 20, 24, 30, 44, 50, 64, 72];
+export const fontSizes = [14, 16, 24, 30, 42, 54, 64, 72, 92];
 export const weights = [400, 700];
 
 export const radius = 3;
 
 export const font = `'Cabin', Helvetica, sans-serif`;
-export const titleFont = `Arvo, Futura, sans-serif`;
+export const titleFont = `'Arvo', Futura, sans-serif`;
 export const monospace = `'Roboto Mono', 'Courier New', monospace`;
 
 export default {
+	dark: true,
 	breakpoints,
 	space,
 	fontSizes,
@@ -147,8 +145,6 @@ export default {
 			},
 		},
 		colors: {
-			white: '#ead048',
-			black: '#525252',
 			focus: 'none',
 			placeholder: colors.secondary.semilight,
 		},
@@ -160,7 +156,6 @@ export default {
 				color: colors.quartenary.main,
 				opacity: 1,
 			},
-
 			color: {
 				dark: 'inherit',
 				light: 'inherit',
@@ -195,7 +190,8 @@ export default {
 	button: {
 		height: '38px',
 		font: {
-			weight: 500,
+			family: font,
+			weight: 400,
 		},
 		border: {
 			width: '1px',
@@ -203,7 +199,7 @@ export default {
 			color: colors.text.main,
 		},
 		padding: {
-			horizontal: '30px',
+			horizontal: '20px',
 		},
 	},
 	radioButton: {
@@ -305,5 +301,10 @@ export default {
 			size: '40px',
 			knob: {},
 		},
+	},
+	link: {
+		hover: {
+			color: 'inherit'
+		}
 	}
 };

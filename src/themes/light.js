@@ -1,9 +1,9 @@
 import { px } from 'styled-system';
 
 const primary = '#183661';
-const secondary = '#1c4b82';
-const tertiary = '#dd6b4d';
-const quartenary = '#dae1e7';
+const secondary = '#0e0e0e';
+const tertiary = '#282828';
+const quartenary = '#d9e0e6';
 
 const danger = '#FF423D';
 const warning = '#FCA321';
@@ -11,27 +11,28 @@ const success = '#1AC135';
 const info = '#1496E1';
 
 const colors = {
+	white: '#FBFBFB',
 	background: {
-		main: '#FBFBFB',
-		light: '#FBFBFB',
-		dark: '#f9f9f9'
+		main: '#f8f8f8',
+		light: 'rgba(255,255,255,0.71)',
+		dark: '#e1e1e1'
 	},
 	text: {
-		main: '#000000',
-		light: '#3c3e42',
-		dark: '#1c1d1e',
+		main: '#0e0e0e',
+		light: '#66696e',
+		dark: '#000000',
 	},
 	primary: {
 		main: primary,
 		semilight: '#A5ABBD',
 		light: '#717787',
-		dark: '#183661',
+		dark: '#122142',
 	},
 	secondary: {
 		main: secondary,
 		semilight: '#F6F9FF',
 		light: '#3192FA',
-		dark: '#1c4b82',
+		dark: secondary,
 	},
 	tertiary: {
 		main: tertiary,
@@ -42,7 +43,7 @@ const colors = {
 	quartenary: {
 		main: quartenary,
 		light: '#ebf2f8',
-		dark: '#848b91',
+		dark: quartenary,
 	},
 	danger: {
 		main: danger,
@@ -100,16 +101,16 @@ const emphasizedControlHeight = 48;
 export const breakpoints = [576, 768, 992, 1200];
 
 export const space = [
-	0,
-	4,
-	8,
-	16,
+	2,
+	6,
+	12,
+	20,
 	defaultControlHeight,
 	emphasizedControlHeight,
 	128,
 ];
 
-export const fontSizes = [16, 18, 20, 24, 30, 44, 50, 64, 72];
+export const fontSizes = [14, 16, 24, 30, 42, 54, 64, 72, 92];
 export const weights = [400, 700];
 
 export const radius = 3;
@@ -155,7 +156,6 @@ export default {
 				color: colors.quartenary.main,
 				opacity: 1,
 			},
-
 			color: {
 				dark: 'inherit',
 				light: 'inherit',
@@ -199,7 +199,7 @@ export default {
 			color: colors.text.main,
 		},
 		padding: {
-			horizontal: '30px',
+			horizontal: '20px',
 		},
 	},
 	radioButton: {
@@ -301,5 +301,10 @@ export default {
 			size: '40px',
 			knob: {},
 		},
+	},
+	link: {
+		hover: {
+			color: 'inherit'
+		}
 	}
 };

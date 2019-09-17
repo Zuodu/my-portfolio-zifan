@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+	display: flex;
+	align-items: center;
 	a {
-		color: #6d6d6d;
+		color: ${props => props.theme.colors.text.main};
+		font-family: ${props => props.theme.titleFont};
 		text-decoration: none;
 	}
 

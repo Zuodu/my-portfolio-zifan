@@ -1,7 +1,7 @@
 import React from 'react'
 import { SEO } from 'Common'
 import { LayoutFr } from 'Layout'
-import { Intro, Skills, Contact, Projects } from 'Components/landing'
+import { Intro, About, Contact, Projects } from 'Components/landing'
 
 export default (props) => {
 	console.log(props);
@@ -9,8 +9,8 @@ export default (props) => {
 		<LayoutFr location={props.location}>
 			<SEO />
 			<Intro />
+			<About />
 			<Projects />
-			<Skills />
 			<Contact />
 		</LayoutFr>
 	)

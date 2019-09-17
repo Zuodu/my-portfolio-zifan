@@ -2,7 +2,7 @@ import React, { useState, Suspense } from 'react'
 import { IntlProvider } from 'react-intl'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
-import { useTheme, Provider } from 'rendition'
+import { useTheme, Provider, Box } from 'rendition'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
 import { StaticQuery, graphql } from 'gatsby'
 import { Footer, Header, Loading } from 'Common'
@@ -33,24 +33,25 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
 				const url = location.pathname
 				const { langs, defaultLangKey } = data.site.siteMetadata.languages
 				const langKey = getCurrentLangKey(langs, defaultLangKey, url)
-				const homeLink = `/${langKey}`.replace(`/${defaultLangKey}/`, '/')
+				const homeLink = `/${langKey}`
 				const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({
 					...item,
-					link: item.link.replace(`/${defaultLangKey}/`, '/'),
+					link: item.link,
 				}))
-				console.log(`base/ isDarkmode : ${isDarkMode}`)
+				console.log(langsMenu)
 				return (
 					<IntlProvider locale={langKey} messages={i18nMessages}>
 						<Suspense fallback={<Loading />}>
 							<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
 								<Provider theme={isDarkMode ? darkTheme : lightTheme}>
 									<GlobalStyle />
-									<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} />
-									{children}
-									<Footer />
+									<Box bg="background.main">
+										<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} langs={langsMenu} home={homeLink} />
+										{children}
+										<Footer />
+									</Box>
 								</Provider>
 							</ThemeProvider>
-
 						</Suspense>
 					</IntlProvider>
 				)

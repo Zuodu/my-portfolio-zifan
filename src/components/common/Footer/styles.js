@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	padding: 28rem 0 4rem 0;
+	background-color: ${props => props.theme.colors.background.main};
 	background-image: url('../illustrations/footer.svg');
 	background-size: cover;
 	background-position: top;

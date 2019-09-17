@@ -5,8 +5,12 @@ export const Wrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	
 	a {
-		color: #212121;
+		font-family: ${props => props.theme.titleFont};
+		color: ${props => props.theme.colors.text.main};
+	}
+	a:hover,a:active {
+		color: ${props => props.theme.colors.text.main};
 	}
 `

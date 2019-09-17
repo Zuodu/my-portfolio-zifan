@@ -83,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
       top: -0.5em;
     }
     img {
-      border-style: none;
+  		border-radius: 20px;
     }
     svg:not(:root) {
       overflow: hidden;

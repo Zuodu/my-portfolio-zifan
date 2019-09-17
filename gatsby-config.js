@@ -1,5 +1,5 @@
 const path = require('path')
-const config = require('./data/config')
+const config = require('./src/data/config')
 
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
@@ -11,20 +11,20 @@ module.exports = {
 		description: config.defaultDescription,
 		languages: {
 			langs: config.langs,
-			defaultLangKey: config.defaultLangKey
+			defaultLangKey: config.defaultLangKey,
 		},
 		author: config.author,
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-styled-components',
-		/* {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: '${__dirname}/src/assets',
-      },
-    }, */
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'assets',
+				path: path.join(__dirname, 'src', 'assets'),
+			},
+		},
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-netlify',
@@ -32,9 +32,9 @@ module.exports = {
 			resolve: 'gatsby-plugin-web-font-loader',
 			options: {
 				google: {
-					families: ['Arvo:400,700', 'Cabin:400,700']
-				}
-			}
+					families: ['Arvo:400,700', 'Cabin:400,700'],
+				},
+			},
 		},
 		{
 			resolve: 'gatsby-plugin-i18n',
@@ -43,7 +43,7 @@ module.exports = {
 				langKeyForNull: 'any',
 				langKeyDefault: config.defaultLangKey,
 				prefixDefault: true,
-			}
+			},
 		},
 		{
 			resolve: 'gatsby-source-graphql',
@@ -99,12 +99,13 @@ module.exports = {
 					Utils: path.resolve(__dirname, 'src/utils'),
 					Common: path.resolve(__dirname, 'src/components/common'),
 					Layout: path.resolve(__dirname, 'src/components/common/Layout'),
-					Static: path.resolve(__dirname, 'static/'),
+					Static: path.resolve(__dirname, 'static'),
+					Assets: path.resolve(__dirname, 'src/assets/'),
 					Theme: path.resolve(__dirname, 'src/components/theme'),
-					Data: path.resolve(__dirname, 'data/config'),
-					I18n: path.resolve(__dirname, 'src/i18n')
+					Data: path.resolve(__dirname, 'src/data/config'),
+					I18n: path.resolve(__dirname, 'src/i18n'),
 				},
 			},
-		}
+		},
 	],
 }

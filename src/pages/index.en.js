@@ -1,14 +1,14 @@
 import React from 'react'
 import { SEO } from 'Common'
 import { LayoutEn } from 'Layout'
-import { Intro, Skills, Contact, Projects } from 'Components/landing'
+import { Intro, About, Contact, Projects } from 'Components/landing'
 
 export default (props) => (
 	<LayoutEn location={props.location}>
 		<SEO />
 		<Intro />
+		<About />
 		<Projects />
-		<Skills />
 		<Contact />
 	</LayoutEn>
 )

@@ -4,7 +4,7 @@ import { defaultLangKey } from 'Data';
 
 export default ()  => {
 	useEffect(() => {
-		navigate(`/${  defaultLangKey}`);
+		navigate(`/${  defaultLangKey}/`);
 	}, []);
 	return null;
 }

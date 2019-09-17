@@ -8,6 +8,7 @@ module.exports = {
 		'global-require': 0,
 		'react/prop-types': 0,
 		'react/destructuring-assignment': 0,
+		'react/jsx-max-props-per-line': 0,
 		'import/no-unresolved': 0,
 		'import/no-webpack-loader-syntax': 0,
 		'import/no-named-as-default': 0,

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+	padding-bottom: 4rem;
 	background-image: url('../illustrations/details.svg');
 	background-size: contain;
 	background-position: left top;
 	background-repeat: no-repeat;
 `
 
-export const SkillsWrapper = styled.div`
+export const AboutWrapper = styled.div`
 	padding: 4rem 0;
 	display: flex;
 	align-items: center;
@@ -51,6 +52,6 @@ export const Thumbnail = styled.div`
 	}
 
 	img {
-		width: 100%;
+	alignment: center;
 	}
 `

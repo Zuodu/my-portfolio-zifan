@@ -1,17 +1,22 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, Heading, Txt } from 'rendition'
 import { Container } from 'Common'
 import { FormattedMessage } from 'react-intl'
 import NavbarLinks from '../NavbarLinks'
 import { Wrapper } from './styles'
 
 
-const Navbar = ({getDarkMode, setDarkMode}) => (
+const Navbar = ({getDarkMode, setDarkMode, langs, home}) => (
 	<Wrapper as={Container}>
-		<Link to="/">
-			<FormattedMessage id="name" />
+		<Link color="text.main" to={home}>
+			<Heading.h4>
+				<FormattedMessage id="name" />
+			</Heading.h4>
+			<Txt>
+				<FormattedMessage id="job" />
+			</Txt>
 		</Link>
-		<NavbarLinks desktop getDarkMode={getDarkMode} setDarkMode={setDarkMode} />
+		<NavbarLinks desktop getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} />
 	</Wrapper>
 )
 
