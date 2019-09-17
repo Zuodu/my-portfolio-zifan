@@ -6,6 +6,7 @@ module.exports = {
 		semi: 0,
 		'comma-dangle': 0,
 		'global-require': 0,
+		'no-unused-expressions': 0,
 		'react/prop-types': 0,
 		'react/destructuring-assignment': 0,
 		'react/jsx-max-props-per-line': 0,

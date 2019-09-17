@@ -12,9 +12,9 @@ import { GlobalStyle } from './styles'
 import light from '../../../themes/light'
 
 export const BaseLayout = ({ children, location, i18nMessages }) => {
-	const storedDarkMode = localStorage.getItem('darkMode')
+	let storedDarkMode
+	typeof window !== `undefined` ? storedDarkMode = window.localStorage.getItem('darkMode') : storedDarkMode = null
 	const [isDarkMode, setIsDarkMode] = useState(storedDarkMode === 'true')
-	const theme = useTheme()
 	return (
 		<StaticQuery
 			query={graphql`
@@ -31,28 +31,27 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
       `}
 			render={data => {
 				const url = location.pathname
+				console.log(url)
 				const { langs, defaultLangKey } = data.site.siteMetadata.languages
 				const langKey = getCurrentLangKey(langs, defaultLangKey, url)
 				const homeLink = `/${langKey}`
 				const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({
 					...item,
-					link: item.link,
+					link: item.link.replace(/\/$/, ''),
 				}))
 				console.log(langsMenu)
 				return (
 					<IntlProvider locale={langKey} messages={i18nMessages}>
-						<Suspense fallback={<Loading />}>
-							<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-								<Provider theme={isDarkMode ? darkTheme : lightTheme}>
-									<GlobalStyle />
-									<Box bg="background.main">
-										<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} langs={langsMenu} home={homeLink} />
-										{children}
-										<Footer />
-									</Box>
-								</Provider>
-							</ThemeProvider>
-						</Suspense>
+						<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+							<Provider theme={isDarkMode ? darkTheme : lightTheme}>
+								<GlobalStyle />
+								<Box bg="background.main">
+									<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} langs={langsMenu} home={homeLink} />
+									{children}
+									<Footer />
+								</Box>
+							</Provider>
+						</ThemeProvider>
 					</IntlProvider>
 				)
 			}}

@@ -1,4 +1,4 @@
-import { px } from 'styled-system';
+import { px } from 'styled-system'
 
 const primary = '#0a91ab';
 const secondary = '#ffc045';
@@ -118,6 +118,7 @@ export const font = `'Cabin', Helvetica, sans-serif`;
 export const titleFont = `'Arvo', Futura, sans-serif`;
 export const monospace = `'Roboto Mono', 'Courier New', monospace`;
 
+
 export default {
 	dark: true,
 	breakpoints,
@@ -132,7 +133,7 @@ export default {
 	global: {
 		font: {
 			family: font,
-			size: px(fontSizes[1]),
+			size: '14px',
 			height: 1.5,
 		},
 		control: {
@@ -245,12 +246,12 @@ export default {
 	},
 	text: {
 		medium: {
-			size: px(fontSizes[1]),
+			size: '14px',
 			height: '1.5',
 		},
 	},
 	tab: {
-		extend: `padding: ${px(space[1])} ${px(space[3])}`,
+		extend: `padding: 2px 12px`,
 		color: colors.secondary.main,
 		margin: 'none',
 		border: {
