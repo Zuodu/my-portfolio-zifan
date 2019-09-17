@@ -45,8 +45,8 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs }) => {
 				<div />
 			</DropDownButton>
 			<Button onClick={() => {
-				setDarkMode(!getDarkMode)
 				typeof window !== `undefined` && window.localStorage.setItem('darkMode', !getDarkMode);
+				window.location = '/';
 			}} plain fontSize={3} icon={getThemeIcon(getDarkMode)}
 			/>
 		</Wrapper>

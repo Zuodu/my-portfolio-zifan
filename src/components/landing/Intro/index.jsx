@@ -23,7 +23,7 @@ export const Intro = () => (
 				</Heading.h1>
 				<Heading.h4 color="text.light" mb={2}>Je cherche un job dans l'informatique.</Heading.h4>
 				<Heading.h4 color="text.light" mb={3}>Découvrez mon profil !</Heading.h4>
-				<Button primary href="#about">
+				<Button primary>
 					<FormattedMessage id="view_more" />
 				</Button>
 			</Details>

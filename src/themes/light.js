@@ -1,15 +1,3 @@
-import { px } from 'styled-system';
-
-const primary = '#183661';
-const secondary = '#0e0e0e';
-const tertiary = '#282828';
-const quartenary = '#d9e0e6';
-
-const danger = '#FF423D';
-const warning = '#FCA321';
-const success = '#1AC135';
-const info = '#1496E1';
-
 const colors = {
 	white: '#FBFBFB',
 	background: {
@@ -23,48 +11,48 @@ const colors = {
 		dark: '#000000',
 	},
 	primary: {
-		main: primary,
+		main: '#183661',
 		semilight: '#A5ABBD',
 		light: '#717787',
 		dark: '#122142',
 	},
 	secondary: {
-		main: secondary,
+		main: '#0e0e0e',
 		semilight: '#F6F9FF',
 		light: '#3192FA',
-		dark: secondary,
+		dark: '#0e0e0e',
 	},
 	tertiary: {
-		main: tertiary,
+		main: '#282828',
 		light: '#BA8474',
 		semilight: '#FCE6E4',
 		dark: '#56423D',
 	},
 	quartenary: {
-		main: quartenary,
+		main: '#d9e0e6',
 		light: '#ebf2f8',
-		dark: quartenary,
+		dark: '#d9e0e6',
 	},
 	danger: {
-		main: danger,
+		main: '#FF423D',
 		semilight: '#ffa1a1',
 		light: '#ffebeb',
 		dark: '#dc2823',
 	},
 	warning: {
-		main: warning,
+		main: '#FCA321',
 		semilight: '#fdd190',
 		light: '#fff5e6',
 		dark: '#ee8d00',
 	},
 	success: {
-		main: success,
+		main: '#1AC135',
 		semilight: '#8ce09a',
 		light: '#f0fdf2',
 		dark: '#16a52d',
 	},
 	info: {
-		main: info,
+		main: '#1496E1',
 		semilight: '#90cbee',
 		light: '#e9f4fb',
 		dark: '#1078b4',
@@ -121,6 +109,7 @@ export const monospace = `'Roboto Mono', 'Courier New', monospace`;
 
 
 export default {
+	dark: false,
 	breakpoints,
 	space,
 	fontSizes,

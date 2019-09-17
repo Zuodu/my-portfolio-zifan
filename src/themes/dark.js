@@ -1,15 +1,3 @@
-import { px } from 'styled-system'
-
-const primary = '#0a91ab';
-const secondary = '#ffc045';
-const tertiary = '#d7dfe1';
-const quartenary = '#0a91ab';
-
-const danger = '#FF423D';
-const warning = '#FCA321';
-const success = '#1AC135';
-const info = '#1496E1';
-
 const colors = {
 	background: {
 		main: '#1d2331',
@@ -22,48 +10,48 @@ const colors = {
 		dark: '#dedede',
 	},
 	primary: {
-		main: primary,
+		main: '#0a91ab',
 		semilight: '#0ac6e1',
 		light: '#0aa6c1',
 		dark: '#09667b',
 	},
 	secondary: {
-		main: secondary,
+		main: '#ffc045',
 		semilight: '#bbdeff',
 		light: '#3192FA',
-		dark: secondary,
+		dark: '#ffc045',
 	},
 	tertiary: {
-		main: tertiary,
+		main: '#d7dfe1',
 		light: '#ffe27c',
 		semilight: '#d7dfe1',
 		dark: '#d7dfe1',
 	},
 	quartenary: {
-		main: quartenary,
-		light: quartenary,
+		main: '#0a91ab',
+		light: '#0a91ab',
 		dark: '#0a6273',
 	},
 	danger: {
-		main: danger,
+		main: '#FF423D',
 		semilight: '#ffa1a1',
 		light: '#ffebeb',
 		dark: '#dc2823',
 	},
 	warning: {
-		main: warning,
+		main: '#FCA321',
 		semilight: '#fdd190',
 		light: '#fff5e6',
 		dark: '#ee8d00',
 	},
 	success: {
-		main: success,
+		main: '#1AC135',
 		semilight: '#8ce09a',
 		light: '#f0fdf2',
 		dark: '#16a52d',
 	},
 	info: {
-		main: info,
+		main: '#1496E1',
 		semilight: '#90cbee',
 		light: '#e9f4fb',
 		dark: '#1078b4',

@@ -22,7 +22,10 @@ const flagSwitcher = (lang) => {
 const SelectLanguage = (props) => {
 	const links = props.langs.map(lang => (
 		<div key={lang.langKey}>
-			<Link to={lang.link} color="text.main">
+			<Link to={lang.link} color="text.main" onClick={() => {
+				typeof window !== `undefined` && window.localStorage.setItem("selectedLang", lang.langKey)
+			}}
+			>
 				<Txt>
 					<ReactCountryFlag code={flagSwitcher(lang.langKey)} />
 					<FormattedMessage id={lang.langKey} />
