@@ -2,19 +2,20 @@ import React from 'react'
 import { Form, withFormik, FastField, ErrorMessage } from 'formik'
 import Recaptcha from 'react-google-recaptcha'
 import * as Yup from 'yup'
-import { Button, Input } from 'Common'
+import { Button } from 'rendition'
+import { Input } from 'Common'
 import { recaptcha_key } from 'Data'
 import { Error, Center, InputField } from './styles'
 
 const ContactForm = ({
-	setFieldValue,
-	isSubmitting,
-	values,
-	errors,
-	touched,
-}) => (
+											 setFieldValue,
+											 isSubmitting,
+											 values,
+											 errors,
+											 touched,
+										 }) => (
 	<Form
-		name="portfolio-dev"
+		name="zifan-web"
 		method="post"
 		data-netlify="true"
 		data-netlify-recaptcha="true"
@@ -107,13 +108,13 @@ export default withFormik({
 		}),
 	handleSubmit: async (
 		{ name, email, message, recaptcha },
-		{ setSubmitting, resetForm, setFieldValue }
+		{ setSubmitting, resetForm, setFieldValue },
 	) => {
 		try {
 			const encode = data => {
 				return Object.keys(data)
 					.map(
-						key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+						key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
 					)
 					.join('&')
 			}
@@ -121,7 +122,7 @@ export default withFormik({
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				body: encode({
-					'form-name': 'portfolio-dev',
+					'form-name': 'zifan-web',
 					name,
 					email,
 					message,

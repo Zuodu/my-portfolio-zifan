@@ -1,7 +1,16 @@
+import { breakpoints,
+	space,
+	weights,
+	fontSizes,
+	font,
+	titleFont,
+	monospace,
+	radius, } from './commonProperties'
+
 const colors = {
 	white: '#FBFBFB',
 	background: {
-		main: '#f8f8f8',
+		main: '#fbfbfb',
 		light: 'rgba(255,255,255,0.71)',
 		dark: '#e1e1e1'
 	},
@@ -17,16 +26,16 @@ const colors = {
 		dark: '#122142',
 	},
 	secondary: {
-		main: '#0e0e0e',
-		semilight: '#F6F9FF',
-		light: '#3192FA',
-		dark: '#0e0e0e',
+		main: '#4391F9',
+		semilight: '#baf5fc',
+		light: '#65bef9',
+		dark: '#3f6ed0',
 	},
 	tertiary: {
-		main: '#282828',
+		main: '#252525',
 		light: '#BA8474',
 		semilight: '#FCE6E4',
-		dark: '#56423D',
+		dark: '#2b221f',
 	},
 	quartenary: {
 		main: '#d9e0e6',
@@ -83,29 +92,7 @@ const colors = {
 	},
 };
 
-const defaultControlHeight = 38;
-const emphasizedControlHeight = 48;
 
-export const breakpoints = [576, 768, 992, 1200];
-
-export const space = [
-	2,
-	6,
-	12,
-	20,
-	defaultControlHeight,
-	emphasizedControlHeight,
-	128,
-];
-
-export const fontSizes = [14, 16, 24, 30, 42, 54, 64, 72, 92];
-export const weights = [400, 700];
-
-export const radius = 3;
-
-export const font = `'Cabin', Helvetica, sans-serif`;
-export const titleFont = `'Arvo', Futura, sans-serif`;
-export const monospace = `'Roboto Mono', 'Courier New', monospace`;
 
 
 export default {
@@ -229,9 +216,9 @@ export default {
 	},
 	layer: {
 		container: {
-			zIndex: 40,
+			zIndex: 8,
 		},
-		zIndex: 30,
+		zIndex: 9,
 	},
 	text: {
 		medium: {

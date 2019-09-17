@@ -21,9 +21,9 @@ export const Intro = () => (
 						<Txt>Guten Tag !</Txt>
 					</TextLoop>
 				</Heading.h1>
-				<Heading.h4 color="text.light" mb={2}>Je cherche un job dans l'informatique.</Heading.h4>
-				<Heading.h4 color="text.light" mb={3}>Découvrez mon profil !</Heading.h4>
-				<Button primary>
+				<Heading.h4 color="text.light" mb={2}><FormattedMessage id="intro1" /></Heading.h4>
+				<Heading.h4 color="text.light" mb={3}><FormattedMessage id="intro2" /></Heading.h4>
+				<Button primary href="#about">
 					<FormattedMessage id="view_more" />
 				</Button>
 			</Details>

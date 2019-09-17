@@ -1,18 +1,21 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Img from 'gatsby-image'
-import { Container, Button } from 'Common'
-import { Box } from 'rendition'
+import { Container } from 'Common'
+import { Box, Heading, Txt, Button } from 'rendition'
+import { FormattedMessage } from 'react-intl'
+import { getLangFromPath } from 'Utils/pathUtils'
 import { Wrapper, AboutWrapper, Details, Thumbnail } from './styles'
+import './iconScroll.css'
 
-export const About = () => (
+
+export const About = ({path}) => (
 	<StaticQuery
 		query={graphql`
     query {
         imagePortrait: file(relativePath: {eq: "photos/portrait.jpg"}) {
             childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 400) {
+                fluid(maxWidth: 800, maxHeight: 800) {
                     ...GatsbyImageSharpFluid
                 }
             }
@@ -28,16 +31,17 @@ export const About = () => (
 						</Box>
 					</Thumbnail>
 					<Details>
-						<h1>Hi There!</h1>
-						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry’s standard dummy.
-						</p>
-						<Button as={AnchorLink} href="#contact">
-							Hire me
+						<Heading.h3 mb={3}><FormattedMessage id="welcome" /></Heading.h3>
+						<Txt fontSize={2} m={1}><FormattedMessage id="thanks" /></Txt>
+						<Txt fontSize={2} m={1}><FormattedMessage id="about1" /></Txt>
+						<Txt fontSize={2} m={1}><FormattedMessage id="about2" /></Txt>
+						<Txt fontSize={2} m={1}><FormattedMessage id="about4" /></Txt>
+						<Button info href={`${getLangFromPath(path)}/resume`} mt={3}>
+							<FormattedMessage id="seeResume" />
 						</Button>
 					</Details>
 				</AboutWrapper>
+				<div className="icon-scroll" />
 			</Wrapper>
 		)}
 	/>

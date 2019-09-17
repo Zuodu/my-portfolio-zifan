@@ -1,17 +1,9 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	padding-bottom: 4rem;
-	background-image: url('../illustrations/details.svg');
-	background-size: contain;
-	background-position: left top;
-	background-repeat: no-repeat;
-`
-
-export const AboutWrapper = styled.div`
 	padding: 4rem 0;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 
 	@media (max-width: 960px) {
@@ -21,12 +13,12 @@ export const AboutWrapper = styled.div`
 
 export const Details = styled.div`
 	flex: 1;
-	text-justify: auto;
-	padding-left: 2rem;
+	padding-right: 2rem;
 
 	@media (max-width: 960px) {
-		padding-left: unset;
+		padding-right: unset;
 		width: 100%;
+		order: 1;
 	}
 
 	h1 {
@@ -53,6 +45,6 @@ export const Thumbnail = styled.div`
 	}
 
 	img {
-	alignment: center;
+		width: 100%;	
 	}
 `

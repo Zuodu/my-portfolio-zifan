@@ -8,7 +8,6 @@ export default ()  => {
 	typeof window !== `undefined` ? langKey = window.localStorage.getItem("selectedLang") : null;
 	if(langKey === null) langKey = defaultLangKey;
 	useEffect(() => {
-		console.log(`index :${ langKey}`)
 		navigate(`/${langKey}`)
 	}, [langKey])
 	return (

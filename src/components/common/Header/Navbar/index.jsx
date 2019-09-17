@@ -8,7 +8,7 @@ import { Wrapper } from './styles'
 
 const Navbar = ({getDarkMode, setDarkMode, langs, home}) => (
 	<Wrapper as={Container}>
-		<Link color="text.main" to={home}>
+		<Link color="text.main" href={home}>
 			<Heading.h4>
 				<FormattedMessage id="name" />
 			</Heading.h4>

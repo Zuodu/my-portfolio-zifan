@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
 export const Overlay = styled.div`
 	position: fixed;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 	width: 100%;
 	height: 100%;
 	display: none;
@@ -20,6 +20,6 @@ export const Overlay = styled.div`
 		sidebar &&
 		`
 			display: block;
-			z-index: 4;	
+			z-index: 10;	
 	`}
 `

@@ -35,7 +35,6 @@ export const Thumbnail = styled.div`
 	}
 
 	img {
-		margin-left: 15%;
 		width: 100%;
 	}
 `
