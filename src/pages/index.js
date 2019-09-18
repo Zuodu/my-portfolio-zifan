@@ -4,13 +4,16 @@ import { defaultLangKey } from 'Data'
 import { Loading } from 'Common/Loading'
 
 export default ()  => {
-	let langKey;
-	typeof window !== `undefined` ? langKey = window.localStorage.getItem("selectedLang") : null;
-	if(langKey === null) langKey = defaultLangKey;
-	typeof document !== `undefined` && console.log(document.referrer)
+	let ref; let prevPath;
+	typeof window !== `undefined` ? ref = window.document.referrer : null;
+	if(!ref) {
+		prevPath = `/${defaultLangKey}`
+	} else {
+		prevPath = new URL(window.document.referrer).pathname;
+	}
 	useEffect(() => {
-		navigate(`/${langKey}`)
-	}, [langKey])
+		navigate(prevPath)
+	}, [prevPath])
 	return (
 		<Loading />
 	)
