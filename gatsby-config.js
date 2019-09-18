@@ -18,6 +18,42 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-styled-components',
+		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-netlify',
+		'gatsby-plugin-offline',
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 590,
+						},
+					},
+					{
+						resolve: 'gatsby-remark-emojis',
+						options: {
+							active: true,
+							class: 'emoji-icon',
+							size: 64,
+							// Add custom styles
+							styles: {
+								display: 'inline',
+								margin: '0',
+								'margin-top': '1px',
+								position: 'relative',
+								top: '5px',
+								width: '24px',
+							},
+						},
+					},
+					`gatsby-remark-native-lazy-load`,
+					`gatsby-remark-smartypants`,
+				],
+			},
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -25,9 +61,20 @@ module.exports = {
 				path: path.join(__dirname, 'src', 'assets'),
 			},
 		},
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
-		'gatsby-plugin-netlify',
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'content',
+				path: path.join(__dirname, 'src', 'pages', 'blog'),
+			},
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'projects',
+				path: path.join(__dirname, 'src','pages', 'projects'),
+			},
+		},
 		{
 			resolve: 'gatsby-plugin-web-font-loader',
 			options: {
@@ -43,6 +90,26 @@ module.exports = {
 				langKeyForNull: 'any',
 				langKeyDefault: config.defaultLangKey,
 				prefixDefault: true,
+				markdownRemark: {
+					postPage: 'src/templates/project-post.js',
+					query: `
+					{
+						allMarkdownRemark {
+							edges {
+								node {
+									frontmatter {
+										path
+									}
+									fields {
+										slug
+										langKey
+									}
+								}
+							}
+						}
+					}
+					`,
+				},
 			},
 		},
 		{
@@ -89,7 +156,6 @@ module.exports = {
 				},
 			},
 		},
-		'gatsby-plugin-offline',
 		{
 			resolve: `gatsby-plugin-alias-imports`,
 			options: {

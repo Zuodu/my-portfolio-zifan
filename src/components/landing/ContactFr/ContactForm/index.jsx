@@ -81,7 +81,7 @@ const ContactForm = ({
 			</InputField>
 		)}
 		<Center>
-			<Button secondary type="submit" disabled={isSubmitting}>
+			<Button info type="submit" disabled={isSubmitting}>
 				Envoyer
 			</Button>
 		</Center>

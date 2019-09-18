@@ -1,8 +1,10 @@
 import React from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Button, DropDownButton, useTheme } from 'rendition'
 import { IoIosMoon, IoIosSunny } from 'react-icons/io'
 import { FormattedMessage } from 'react-intl'
 import { Style } from 'radium'
+import data from 'Data'
 import { getLangFromPath } from 'Utils/pathUtils'
 import { Wrapper } from './styles'
 import SelectLanguage from '../SelectLanguage'
@@ -19,9 +21,51 @@ const getThemeIcon = (darkMode) => {
 	)
 }
 
-const pathWithLangParser = (linkTo, pathname) => {
+const redirectStrategist = (linkTo, pathname) => {
 	const lang = getLangFromPath(pathname)
-	return `/${lang}/${linkTo}`;
+	if (linkTo === 'about') {
+		return `/${lang}/resume/${data.resumeFileName}`
+	}
+	return `/${lang}/${linkTo}`
+}
+
+const showIfHome = (pathname, isHome) => {
+	if(!pathname){
+		return (
+			{
+				display: 'none',
+			}
+		)
+	}
+	switch (isHome) {
+	case true:
+		if (pathname.match(/^\/\w{2}\/?$/g)) {
+			return {}
+		}
+		return (
+			{
+				display: 'none',
+			}
+		)
+	case false:
+		if (pathname.match(/^\/\w{2}\/?$/g)) {
+			return (
+				{
+					display: 'none',
+				}
+			)
+		}
+		return {}
+	default:
+		if (pathname.match(/^\/\w{2}\/?$/g)) {
+			return {}
+		}
+		return (
+			{
+				display: 'none',
+			}
+		)
+	}
 }
 
 const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs }) => {
@@ -30,12 +74,20 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs }) => {
 	typeof window !== `undefined` ? currentLocation = window.location.pathname : null
 	return (
 		<Wrapper desktop={desktop}>
-			<a href={pathWithLangParser('resume', currentLocation)}><FormattedMessage id="about" /></a>
-			<a href={pathWithLangParser('projects', currentLocation)}><FormattedMessage id="projects" /></a>
-			<a href={pathWithLangParser('contact', currentLocation)}><FormattedMessage id="contact" /></a>
+			<div style={showIfHome(currentLocation, false)}>
+				<a href={redirectStrategist('about', currentLocation)}><FormattedMessage id="about" /></a>
+				<a href={redirectStrategist('projects', currentLocation)}><FormattedMessage id="projects" /></a>
+				<a href={redirectStrategist('contact', currentLocation)}><FormattedMessage id="contact" /></a>
+			</div>
+			<div style={showIfHome(currentLocation, true)}>
+				<AnchorLink href='#about'><FormattedMessage id="about" /></AnchorLink>
+				<AnchorLink href='#projects'><FormattedMessage id="projects" /></AnchorLink>
+				<AnchorLink href='#contact'><FormattedMessage id="contact" /></AnchorLink>
+			</div>
 			<DropDownButton
 				className="lang-dropdown"
-				mr={3}
+				mr={2}
+				ml={3}
 				quartenary
 				joined
 				outline

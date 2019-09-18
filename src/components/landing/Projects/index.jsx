@@ -1,6 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Container, Card } from 'Common'
+import { Heading } from 'rendition'
+import { FormattedMessage } from 'react-intl'
 import starIcon from 'Static/icons/star.svg'
 import forkIcon from 'Static/icons/fork.svg'
 import { Wrapper, Grid, Item, Content, Stats } from './styles'
@@ -39,7 +41,7 @@ export const Projects = () => {
 	`)
 	return (
 		<Wrapper as={Container} id="projects">
-			<h2>Projects</h2>
+			<Heading.h3 mb={3}><FormattedMessage id="projects" /></Heading.h3>
 			<Grid>
 				{edges.map(({ node }) => (
 					<Item

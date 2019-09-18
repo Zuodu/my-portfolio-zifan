@@ -8,6 +8,7 @@ import { breakpoints,
 	radius, } from './commonProperties'
 
 const colors = {
+	white: '#f5f5f5',
 	background: {
 		main: '#1d2331',
 		light: 'rgba(40,46,61,0.71)',

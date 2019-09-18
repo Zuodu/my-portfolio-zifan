@@ -8,7 +8,7 @@ import { breakpoints,
 	radius, } from './commonProperties'
 
 const colors = {
-	white: '#FBFBFB',
+	white: '#f5f5f5',
 	background: {
 		main: '#fbfbfb',
 		light: 'rgba(255,255,255,0.71)',
@@ -16,7 +16,7 @@ const colors = {
 	},
 	text: {
 		main: '#0e0e0e',
-		light: '#66696e',
+		light: '#93969b',
 		dark: '#000000',
 	},
 	primary: {
@@ -29,7 +29,7 @@ const colors = {
 		main: '#4391F9',
 		semilight: '#baf5fc',
 		light: '#65bef9',
-		dark: '#3f6ed0',
+		dark: '#3f6ed0'
 	},
 	tertiary: {
 		main: '#252525',

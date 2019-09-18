@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'Common'
 import { FormattedMessage } from 'react-intl'
-import { Flex as FlexRen } from 'rendition'
+import { Heading, Flex as FlexRen } from 'rendition'
 import { Wrapper, Flex, Links, Details } from './styles'
 import social from './social.json'
 
@@ -9,8 +9,8 @@ export const Footer = () => (
 	<Wrapper>
 		<Flex as={Container}>
 			<Details>
-				<h2><FormattedMessage id="name" /></h2>
-				<FlexRen alignItems="center">
+				<Heading.h4 color='white'><FormattedMessage id="name" /></Heading.h4>
+				<FlexRen alignItems="center" color='white'>
 					<span>
 						<FormattedMessage id="rights" />
 					</span>

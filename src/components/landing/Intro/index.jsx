@@ -31,5 +31,6 @@ export const Intro = () => (
 				<img src={nerd} alt="It looks like me !" />
 			</Thumbnail>
 		</IntroWrapper>
+		<div className="icon-scroll" />
 	</Wrapper>
 )
