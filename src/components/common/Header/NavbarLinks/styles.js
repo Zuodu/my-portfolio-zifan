@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	display: flex;
-	align-items: center;
-	a {
-		color: ${props => props.theme.colors.text.main};
-		font-family: ${props => props.theme.titleFont};
-		text-decoration: none;
-	}
+  display: flex;
+  align-items: center;
+  a {
+    color: ${props => props.theme.colors.text.main};
+    font-family: ${props => props.theme.titleFont};
+    text-decoration: none;
+  }
 
-	${({ desktop }) =>
-	desktop
-		? `
+  ${({ desktop }) =>
+    desktop
+      ? `
 			@media (max-width: 960px) {
 					display: none;
 			}
@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 					}
 			}
 		`
-		: `
+      : `
 			padding: 3rem;
 			display: flex;
 			flex-direction: column;
@@ -37,4 +37,4 @@ export const Wrapper = styled.div`
 					}
 			}
 	`}
-`;
+`

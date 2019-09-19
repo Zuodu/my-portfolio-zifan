@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Card = styled.div`
-	padding: 1rem;
-	background: ${props => props.theme.colors.background.light};
-	height: 100%;
-`;
+  padding: 1rem;
+  background: ${props => props.theme.colors.background.light};
+  height: 100%;
+`

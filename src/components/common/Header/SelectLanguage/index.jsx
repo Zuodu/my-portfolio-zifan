@@ -8,14 +8,14 @@ import ReactCountryFlag from "react-country-flag";
 // should NOT do this, but it's 3 langs anyway...
 const flagSwitcher = (lang) => {
 	switch (lang) {
-		case "en":
-			return "gb";
-		case "fr":
-			return "fr";
-		case "zh":
-			return "cn";
-		default:
-			return "eu";
+	case "en":
+		return "gb";
+	case "fr":
+		return "fr";
+	case "zh":
+		return "cn";
+	default:
+		return "eu";
 	}
 };
 
