@@ -27,6 +27,7 @@ const redirectStrategist = (linkTo, pathname) => {
 };
 
 const showIfHome = (pathname, isHome) => {
+	console.log(pathname, isHome);
 	if (!pathname) {
 		return (
 			{

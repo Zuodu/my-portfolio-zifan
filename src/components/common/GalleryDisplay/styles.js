@@ -16,8 +16,7 @@ export const TitleFrame = styled(Container)`
   border-radius: 10px;
   box-shadow: 0 5px 5px 0 black;
   h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
   }

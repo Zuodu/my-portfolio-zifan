@@ -80,7 +80,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-web-font-loader',
 			options: {
 				google: {
-					families: ['Arvo:400,700', 'Cabin:400,700', 'Montserrat'],
+					families: ['Arvo', 'Cabin'],
 				},
 			},
 		},
