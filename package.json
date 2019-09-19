@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "description": "A simple portfolio for developers",
-  "version": "1.1",
+  "version": "1.1.0",
   "author": "Zifan <contact@zifan.fr>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
