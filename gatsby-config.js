@@ -77,11 +77,22 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-plugin-web-font-loader',
+			resolve: 'gatsby-plugin-prefetch-google-fonts',
 			options: {
-				google: {
-					families: ['Arvo', 'Cabin'],
-				},
+				fonts: [
+					{
+						family: 'Arvo',
+						variants: ['400', '700']
+					},
+					{
+						family: 'Cabin',
+						variants: ['400', '700']
+					},
+					{
+						family: 'Montserrat',
+						variants: ['400','700']
+					}
+				]
 			},
 		},
 		{
