@@ -33,4 +33,4 @@ module.exports = {
   langs: ['fr', 'en'],
   defaultLangKey: 'fr',
   resumeFileName: 'yao-cv.pdf',
-}
+};

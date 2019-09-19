@@ -33,4 +33,4 @@ module.exports = {
   projectLocation: 'Location',
   projectTime: 'Period',
   contactMe: 'My contact informations',
-}
+};

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   background-size: contain;
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   backdrop-filter: blur(10px);
   width: 100%;
   box-shadow: 0 5px 5px -5px rgb(0, 0, 0);
-`
+`;
 
 export const Overlay = styled.div`
   position: fixed;
@@ -17,9 +17,9 @@ export const Overlay = styled.div`
   transition: 0.4s;
 
   ${({ sidebar }) =>
-    sidebar &&
+		sidebar &&
     `
 			display: block;
 			z-index: 10;	
 	`}
-`
+`;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { SEO, Container } from 'Common'
-import { LayoutFr } from 'Layout'
-import { Button, Heading, Txt } from 'rendition'
-import Design from 'Static/illustrations/design.svg'
-import { FormattedMessage } from 'react-intl'
-import { Projects } from 'Components/landing/Projects'
-import { Details, ContentWrapper, Thumbnail } from '../themes/pageStyles'
+import React from 'react';
+import { SEO, Container } from 'Common';
+import { LayoutFr } from 'Layout';
+import { Button, Heading, Txt } from 'rendition';
+import Design from 'Static/illustrations/design.svg';
+import { FormattedMessage } from 'react-intl';
+import { Projects } from 'Components/landing/Projects';
+import { Details, ContentWrapper, Thumbnail } from '../themes/pageStyles';
 
 export default props => (
   <LayoutFr location={props.location}>
@@ -24,4 +24,4 @@ export default props => (
     </ContentWrapper>
     <Projects hideTitle lang="fr" />
   </LayoutFr>
-)
+);

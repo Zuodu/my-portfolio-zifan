@@ -1,16 +1,16 @@
-import React from 'react'
-import { SEO } from 'Common'
-import { LayoutFr } from 'Layout'
-import { Heading, Txt } from 'rendition'
-import { FormattedMessage } from 'react-intl'
-import ContactForm from 'Components/landing/ContactFr/ContactForm'
-import contact from 'Static/illustrations/contact.svg'
+import React from 'react';
+import { SEO } from 'Common';
+import { LayoutFr } from 'Layout';
+import { Heading, Txt } from 'rendition';
+import { FormattedMessage } from 'react-intl';
+import ContactForm from 'Components/landing/ContactFr/ContactForm';
+import contact from 'Static/illustrations/contact.svg';
 import {
   ContentWrapper,
   Details,
   Thumbnail,
   PaddedWrapper,
-} from '../themes/pageStyles'
+} from '../themes/pageStyles';
 
 export default props => (
   <LayoutFr location={props.location}>
@@ -35,4 +35,4 @@ export default props => (
       </Details>
     </PaddedWrapper>
   </LayoutFr>
-)
+);

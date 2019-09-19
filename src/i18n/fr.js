@@ -32,4 +32,4 @@ module.exports = {
   projectLocation: 'Localisation',
   projectTime: 'Période',
   contactMe: 'Mes coordonnées',
-}
+};

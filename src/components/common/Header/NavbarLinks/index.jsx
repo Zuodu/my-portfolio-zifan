@@ -35,33 +35,33 @@ const showIfHome = (pathname, isHome) => {
 		);
 	}
 	switch (isHome) {
-		case true:
-			if (pathname.match(/^\/\w{2}\/?$/g)) {
-				return {};
-			}
-			return (
-				{
-					display: "none"
-				}
-			);
-		case false:
-			if (pathname.match(/^\/\w{2}\/?$/g)) {
-				return (
-					{
-						display: "none"
-					}
-				);
-			}
+	case true:
+		if (pathname.match(/^\/\w{2}\/?$/g)) {
 			return {};
-		default:
-			if (pathname.match(/^\/\w{2}\/?$/g)) {
-				return {};
+		}
+		return (
+			{
+				display: "none"
 			}
+		);
+	case false:
+		if (pathname.match(/^\/\w{2}\/?$/g)) {
 			return (
 				{
 					display: "none"
 				}
 			);
+		}
+		return {};
+	default:
+		if (pathname.match(/^\/\w{2}\/?$/g)) {
+			return {};
+		}
+		return (
+			{
+				display: "none"
+			}
+		);
 	}
 };
 

@@ -1,13 +1,13 @@
-import React from 'react'
-import { SEO, GalleryDisplay } from 'Common'
-import { LayoutEn } from 'Layout'
-import { Heading, Txt, Box } from 'rendition'
+import React from 'react';
+import { SEO, GalleryDisplay } from 'Common';
+import { LayoutEn } from 'Layout';
+import { Heading, Txt, Box } from 'rendition';
 import {
   GalleryWrapper,
   ContentWrapper,
   PaddedWrapper,
   CenteredWrapper,
-} from '../themes/pageStyles'
+} from '../themes/pageStyles';
 
 // Images from svgbackgrounds.com and heropatterns.com
 export default props => (
@@ -65,4 +65,4 @@ export default props => (
     </GalleryWrapper>
     <ContentWrapper />
   </LayoutEn>
-)
+);

@@ -1,6 +1,6 @@
-import React from 'react'
-import { SEO } from 'Common'
-import { LayoutFr } from 'Layout'
+import React from 'react';
+import { SEO } from 'Common';
+import { LayoutFr } from 'Layout';
 
 export default props => (
   <LayoutFr location={props.location}>
@@ -8,4 +8,4 @@ export default props => (
     <h1>PAGE NON TROUVÉ</h1>
     <p>La page n'existe pas... dommage :(</p>
   </LayoutFr>
-)
+);

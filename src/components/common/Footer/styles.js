@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Flex as FlexRen } from 'rendition'
+import styled from 'styled-components';
+import { Flex as FlexRen } from 'rendition';
 
 export const Wrapper = styled.div`
   padding: 28rem 0 4rem 0;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   @media (max-width: 1960px) {
     padding: 14rem 0 4rem;
   }
-`
+`;
 
 export const Flex = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ export const Flex = styled.div`
     text-align: center;
     align-items: center;
   }
-`
+`;
 
 export const Links = styled.div`
   display: flex;
@@ -43,16 +43,16 @@ export const Links = styled.div`
       margin: 0;
     }
   }
-`
+`;
 
 export const Details = styled.div`
   @media (max-width: 680px) {
     margin-bottom: 2rem;
   }
-`
+`;
 
 export const BetterFlex = styled(FlexRen)`
   @media (max-width: 680px) {
     display: block;
   }
-`
+`;

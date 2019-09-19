@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   padding: 30px 0;
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   @media (max-width: 1080px) {
     padding: 10px 0;
   }
-`
+`;
 
 export const ProjectsPageWrapper = styled.article`
   padding: 2rem 0;
@@ -21,7 +21,7 @@ export const ProjectsPageWrapper = styled.article`
   @media (min-width: 1080px) {
     padding: 2rem 8rem;
   }
-`
+`;
 
 export const Description = styled.div`
   padding-top: ${props => props.theme.space[3]}px;
@@ -33,13 +33,13 @@ export const Description = styled.div`
       ${props => props.theme.space[5]}px;
     color: ${props => props.theme.colors.text.light};
   }
-`
+`;
 
 export const PostHead = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const ContentSection = styled.section`
   text-align: justify;
@@ -64,4 +64,4 @@ export const ContentSection = styled.section`
     pointer-events: none;
     user-select: none;
   }
-`
+`;

@@ -7,7 +7,7 @@ import {
   titleFont,
   monospace,
   radius,
-} from './commonProperties'
+} from './commonProperties';
 
 const colors = {
   white: '#f5f5f5',
@@ -92,7 +92,7 @@ const colors = {
     light: '#303841',
     dark: '#0a0e15',
   },
-}
+};
 
 export default {
   dark: true,
@@ -283,4 +283,4 @@ export default {
       color: 'inherit',
     },
   },
-}
+};

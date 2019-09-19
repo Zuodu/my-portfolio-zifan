@@ -1,13 +1,13 @@
-import styled from 'styled-components'
-import { Container } from 'rendition'
-import Img from 'gatsby-image'
+import styled from 'styled-components';
+import { Container } from 'rendition';
+import Img from 'gatsby-image';
 
 export const Wrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   padding: 0;
   color: ${props => props.theme.colors.white};
-`
+`;
 
 export const TitleFrame = styled(Container)`
   text-align: center;
@@ -24,7 +24,7 @@ export const TitleFrame = styled(Container)`
   @media (max-width: 1080px) {
     width: 90%;
   }
-`
+`;
 
 export const Grid = styled.div`
   padding-top: 3rem;
@@ -41,15 +41,15 @@ export const Grid = styled.div`
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const Item = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
   box-shadow: 0 3px 7px 0 black;
-`
+`;
 
 export const Image = styled(Img)`
   width: 100%;
-`
+`;
