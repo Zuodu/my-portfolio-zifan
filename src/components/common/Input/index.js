@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Input = styled.input`
 	width: 100%;
@@ -11,13 +11,12 @@ export const Input = styled.input`
 	margin-bottom: 0.5rem;
 	transition: 0.3s;
 
-	${({ error }) =>
-		error &&
-		`
+	${({ error }) => error &&
+	`
 		border-color: #ff4136;
 	`}
 
 	&::placeholder {
 		color: ${props => props.theme.colors.text.light};
 	}
-`
+`;

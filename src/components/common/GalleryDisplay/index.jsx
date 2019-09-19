@@ -1,9 +1,7 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Container, Card } from "Common";
-import { Heading, Txt, Box } from "rendition";
-import { FormattedMessage } from "react-intl";
-import { TitleFrame, Wrapper, Grid, Item, Image } from "./styles";
+import { graphql, useStaticQuery } from "gatsby";
+import { Box, Heading } from "rendition";
+import { Grid, Image, Item, TitleFrame, Wrapper } from "./styles";
 import "./hover.css";
 
 export const GalleryDisplay = ({ cat, lang }) => {
@@ -14,7 +12,7 @@ export const GalleryDisplay = ({ cat, lang }) => {
           allGalleryYaml {
               edges {
                   node {
-											id
+                      id
                       title
                       fr
                       en
@@ -31,7 +29,7 @@ export const GalleryDisplay = ({ cat, lang }) => {
               }
           }
       }
-  `);
+	`);
 	const array = edges.filter((value) => {
 		return value.node.category === cat;
 	});
@@ -55,7 +53,7 @@ export const GalleryDisplay = ({ cat, lang }) => {
 										{node.title}
 									</h3>
 									<p className="content-text">
-										{lang === 'fr' ? node.fr : node.en}
+										{lang === "fr" ? node.fr : node.en}
 									</p>
 								</div>
 							</div>

@@ -1,34 +1,34 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Container, Card } from "Common";
-import { Heading, Tag, Txt } from "rendition";
+import { graphql, useStaticQuery } from "gatsby";
+import { Card, Container } from "Common";
+import { Heading, Tag } from "rendition";
 import { FormattedMessage } from "react-intl";
-import { Wrapper, Grid, Item, Content, Stats } from "./styles";
+import { Content, Grid, Item, Stats, Wrapper } from "./styles";
 
 export const Projects = ({ hideTitle, lang }) => {
 	const {
-		allMarkdownRemark: {edges}
+		allMarkdownRemark: { edges }
 	} = useStaticQuery(graphql`
-			{
-				allMarkdownRemark(filter: {frontmatter: {directory: {eq: "projects"}}}) {
-					edges {
-						node {
-							frontmatter {
-								title
-								subtitle
-								tags
-							}
-							fields {
-								slug
-								langKey
-							}
-							id
-							excerpt
-						}
-					}
-				}
-			}
-		`);
+      {
+          allMarkdownRemark(filter: {frontmatter: {directory: {eq: "projects"}}}) {
+              edges {
+                  node {
+                      frontmatter {
+                          title
+                          subtitle
+                          tags
+                      }
+                      fields {
+                          slug
+                          langKey
+                      }
+                      id
+                      excerpt
+                  }
+              }
+          }
+      }
+	`);
 	const array = edges.filter((value) => {
 		return value.node.fields.langKey === lang;
 	});

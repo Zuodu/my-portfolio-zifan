@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import Headroom from 'react-headroom'
-import { Box } from 'rendition'
-import Navbar from './Navbar'
-import Hamburger from './Hamburger'
-import Sidebar from './Sidebar'
-import { Wrapper, Overlay } from './styles'
+import React, { useState } from "react";
+import Headroom from "react-headroom";
+import { Box } from "rendition";
+import Navbar from "./Navbar";
+import Hamburger from "./Hamburger";
+import Sidebar from "./Sidebar";
+import { Overlay, Wrapper } from "./styles";
 
 export const Header = ({ getDarkMode, setDarkMode, langs, home }) => {
-	const [sidebar, toggle] = useState(false)
+	const [sidebar, toggle] = useState(false);
 	return (
 		<Headroom>
 			<Wrapper>
@@ -21,5 +21,5 @@ export const Header = ({ getDarkMode, setDarkMode, langs, home }) => {
 				</Box>
 			</Wrapper>
 		</Headroom>
-	)
-}
+	);
+};

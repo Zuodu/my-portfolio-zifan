@@ -1,7 +1,7 @@
-import React from 'react'
-import { SEO, GalleryDisplay } from 'Common'
-import { LayoutEn } from 'Layout'
-import { Heading, Txt, Box } from 'rendition'
+import React from "react";
+import { SEO, GalleryDisplay } from "Common";
+import { LayoutEn } from "Layout";
+import { Heading, Txt, Box } from "rendition";
 import { GalleryWrapper, ContentWrapper, PaddedWrapper, CenteredWrapper } from "../themes/pageStyles";
 
 
@@ -12,12 +12,14 @@ export default (props) => (
 		<PaddedWrapper>
 			<CenteredWrapper>
 				<Heading.h1 pt={5} pb={3}>
-					Photo Gallery 📷
+					Photo Gallery&nbsp;<span role="img" aria-label="camera">📷</span>
 				</Heading.h1>
-				<Box style={{textAlign: 'justify'}} pb={5}>
+				<Box style={{ textAlign: "justify" }} pb={5}>
 					<Txt>
-						When I have free time, I enjoy taking pictures with my SONY Alpha III. I have since a few years collected several lenses.
-						I love macrophotography and I try to learn the basics nowadays. When travelling, I usually bring my camera with me so i can take
+						When I have free time, I enjoy taking pictures with my SONY Alpha III. I have since a few years collected
+						several lenses.
+						I love macrophotography and I try to learn the basics nowadays. When travelling, I usually bring my camera
+						with me so i can take
 						some surprinsingly good shots !
 					</Txt>
 					<Txt pt={2}>

@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link, Heading, Txt } from 'rendition'
-import { Container } from 'Common'
-import { FormattedMessage } from 'react-intl'
-import NavbarLinks from '../NavbarLinks'
-import { Wrapper } from './styles'
+import React from "react";
+import { Heading, Link, Txt } from "rendition";
+import { Container } from "Common";
+import { FormattedMessage } from "react-intl";
+import NavbarLinks from "../NavbarLinks";
+import { Wrapper } from "./styles";
 
 
-const Navbar = ({getDarkMode, setDarkMode, langs, home}) => (
+const Navbar = ({ getDarkMode, setDarkMode, langs, home }) => (
 	<Wrapper as={Container}>
 		<Link color="text.main" href={home}>
 			<Heading.h4>
@@ -18,6 +18,6 @@ const Navbar = ({getDarkMode, setDarkMode, langs, home}) => (
 		</Link>
 		<NavbarLinks desktop getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} />
 	</Wrapper>
-)
+);
 
-export default Navbar
+export default Navbar;

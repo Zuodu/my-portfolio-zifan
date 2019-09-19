@@ -1,18 +1,18 @@
-import React from 'react'
-import { Form, withFormik, FastField, ErrorMessage } from 'formik'
-import Recaptcha from 'react-google-recaptcha'
-import * as Yup from 'yup'
-import { Button } from 'rendition'
-import { Input } from 'Common'
-import { recaptcha_key } from 'Data'
-import { Error, Center, InputField } from './styles'
+import React from "react";
+import { ErrorMessage, FastField, Form, withFormik } from "formik";
+import Recaptcha from "react-google-recaptcha";
+import * as Yup from "yup";
+import { Button } from "rendition";
+import { Input } from "Common";
+import { recaptcha_key } from "Data";
+import { Center, Error, InputField } from "./styles";
 
 const ContactForm = ({
 											 setFieldValue,
 											 isSubmitting,
 											 values,
 											 errors,
-											 touched,
+											 touched
 										 }) => (
 	<Form
 		name="zifan-web"
@@ -66,7 +66,7 @@ const ContactForm = ({
 					component={Recaptcha}
 					sitekey={recaptcha_key}
 					name="recaptcha"
-					onChange={value => setFieldValue('recaptcha', value)}
+					onChange={value => setFieldValue("recaptcha", value)}
 				/>
 				<ErrorMessage component={Error} name="recaptcha" />
 			</InputField>
@@ -87,55 +87,55 @@ const ContactForm = ({
 			</Button>
 		</Center>
 	</Form>
-)
+);
 
 export default withFormik({
 	mapPropsToValues: () => ({
-		name: '',
-		email: '',
-		message: '',
-		recaptcha: '',
-		success: false,
+		name: "",
+		email: "",
+		message: "",
+		recaptcha: "",
+		success: false
 	}),
 	validationSchema: () =>
 		Yup.object().shape({
-			name: Yup.string().required('Full name field is required'),
+			name: Yup.string().required("Full name field is required"),
 			email: Yup.string()
-				.email('Invalid email')
-				.required('Email field is required'),
-			message: Yup.string().required('Message field is required'),
-			recaptcha: Yup.string().required('Robots are not welcome yet!'),
+				.email("Invalid email")
+				.required("Email field is required"),
+			message: Yup.string().required("Message field is required"),
+			recaptcha: Yup.string().required("Robots are not welcome yet!")
 		}),
 	handleSubmit: async (
 		{ name, email, message, recaptcha },
-		{ setSubmitting, resetForm, setFieldValue },
+		{ setSubmitting, resetForm, setFieldValue }
 	) => {
 		try {
 			const encode = data => {
 				return Object.keys(data)
 					.map(
-						key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+						key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
 					)
-					.join('&')
-			}
-			await fetch('/?no-cache=1', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+					.join("&");
+			};
+			await fetch("/?no-cache=1", {
+				method: "POST",
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
 				body: encode({
-					'form-name': 'zifan-web',
+					"form-name": "zifan-web",
 					name,
 					email,
 					message,
-					'g-recaptcha-response': recaptcha,
-				}),
-			})
-			await setSubmitting(false)
-			await setFieldValue('success', true)
-			setTimeout(() => resetForm(), 2000)
+					"g-recaptcha-response": recaptcha
+				})
+			});
+			await setSubmitting(false);
+			await setFieldValue("success", true);
+			setTimeout(() => resetForm(), 2000);
 		} catch (err) {
-			setSubmitting(false)
-			setFieldValue('success', false)
-			alert('Something went wrong, please try again!') // eslint-disable-line
+			setSubmitting(false);
+			setFieldValue("success", false);
+			alert("Something went wrong, please try again!"); // eslint-disable-line
 		}
-	},
-})(ContactForm)
+	}
+})(ContactForm);

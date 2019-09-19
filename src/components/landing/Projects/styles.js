@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
 	padding: 2rem 0;
@@ -18,7 +18,7 @@ export const Grid = styled.div`
 	@media (max-width: 680px) {
 		grid-template-columns: 1fr;
 	}
-`
+`;
 
 export const Item = styled.div`
 	width: 100%;
@@ -34,12 +34,12 @@ export const Item = styled.div`
 	p {
 		color: ${props => props.theme.colors.text.light};
 	}
-`
+`;
 
 export const Content = styled.div`
   color: ${props => props.theme.colors.text.main};
 	padding: 1rem 0;
-`
+`;
 
 export const Stats = styled.div`
 	display: flex;
@@ -56,4 +56,4 @@ export const Stats = styled.div`
 		color: ${props => props.theme.colors.text.main};
 		}
 	}
-`
+`;

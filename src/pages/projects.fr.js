@@ -14,7 +14,7 @@ export default (props) => (
 		<ContentWrapper as={Container}>
 			<Details>
 				<Heading.h3 mb={4}>
-          Mes projets réalisés
+					Mes projets réalisés
 				</Heading.h3>
 				<Txt>
 					Voici une panoplie des projets que j'ai réalisé individuellement ou en groupe.

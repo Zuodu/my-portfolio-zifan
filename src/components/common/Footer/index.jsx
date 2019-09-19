@@ -1,9 +1,9 @@
-import React from 'react'
-import { Container } from 'Common'
-import { FormattedMessage } from 'react-intl'
-import { Heading } from 'rendition'
-import { Wrapper, Flex, Links, Details, BetterFlex } from './styles'
-import social from './social.json'
+import React from "react";
+import { Container } from "Common";
+import { FormattedMessage } from "react-intl";
+import { Heading } from "rendition";
+import { BetterFlex, Details, Flex, Links, Wrapper } from "./styles";
+import social from "./social.json";
 
 export const Footer = () => (
 	<Wrapper>
@@ -42,4 +42,4 @@ export const Footer = () => (
 			</Links>
 		</Flex>
 	</Wrapper>
-)
+);

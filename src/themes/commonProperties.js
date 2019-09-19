@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-
 export const defaultControlHeight = 38;
 export const emphasizedControlHeight = 48;
 
@@ -12,7 +10,7 @@ export const space = [
 	20,
 	defaultControlHeight,
 	emphasizedControlHeight,
-	128,
+	128
 ];
 
 export const fontSizes = [10, 16, 18, 24, 28, 32, 40, 48, 52];

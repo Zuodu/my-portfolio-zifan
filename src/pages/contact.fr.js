@@ -1,6 +1,6 @@
-import React from 'react'
-import { SEO } from 'Common'
-import { LayoutFr } from 'Layout'
+import React from "react";
+import { SEO } from "Common";
+import { LayoutFr } from "Layout";
 import { Heading, Txt } from "rendition";
 import { FormattedMessage } from "react-intl";
 import ContactForm from "Components/landing/ContactFr/ContactForm";

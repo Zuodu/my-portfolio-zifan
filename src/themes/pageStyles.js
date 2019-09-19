@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from 'Components/common';
+import { Container } from "Components/common";
 
 export const GalleryWrapper = styled.div`
   background-image: url(${props => props.bgImage});

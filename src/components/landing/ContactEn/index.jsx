@@ -1,10 +1,10 @@
-import React from 'react'
-import { Container } from 'Common'
-import contact from 'Static/illustrations/contact.svg'
-import { Heading } from 'rendition'
-import { FormattedMessage } from 'react-intl'
-import { Wrapper, Details, Thumbnail } from './styles'
-import ContactForm from './ContactForm'
+import React from "react";
+import { Container } from "Common";
+import contact from "Static/illustrations/contact.svg";
+import { Heading } from "rendition";
+import { FormattedMessage } from "react-intl";
+import { Details, Thumbnail, Wrapper } from "./styles";
+import ContactForm from "./ContactForm";
 
 
 export const ContactEn = () => (
@@ -17,4 +17,4 @@ export const ContactEn = () => (
 			<img src={contact} alt="Contact Illustration" />
 		</Thumbnail>
 	</Wrapper>
-)
+);

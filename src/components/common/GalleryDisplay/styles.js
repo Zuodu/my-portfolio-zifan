@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "rendition";
-import Img from 'gatsby-image'
+import Img from "gatsby-image";
 
 export const Wrapper = styled.div`
 	margin: 0 auto;
@@ -41,7 +41,7 @@ export const Grid = styled.div`
 	@media (max-width: 680px) {
 		grid-template-columns: 1fr;
 	}
-`
+`;
 
 export const Item = styled.div`
 	width: 100%;

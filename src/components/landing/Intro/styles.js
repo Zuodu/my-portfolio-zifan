@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
 	padding-bottom: 4rem;
-`
+`;
 
 export const IntroWrapper = styled.div`
 	padding: 4rem 0;
@@ -13,7 +13,7 @@ export const IntroWrapper = styled.div`
 	@media (max-width: 960px) {
 		flex-direction: column;
 	}
-`
+`;
 
 export const Details = styled.div`
 	flex: 1;
@@ -22,7 +22,7 @@ export const Details = styled.div`
 		width: 100%;
 		margin-bottom: 2rem;
 	}
-`
+`;
 
 export const Thumbnail = styled.div`
 	flex: 1;
@@ -34,4 +34,4 @@ export const Thumbnail = styled.div`
 	img {
 		width: 100%;
 	}
-`
+`;

@@ -1,9 +1,9 @@
-const path = require('path')
-const config = require('./src/data/config')
+const path = require('path');
+const config = require('./src/data/config');
 
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
 	siteMetadata: {
@@ -160,4 +160,4 @@ module.exports = {
 			},
 		},
 	],
-}
+};

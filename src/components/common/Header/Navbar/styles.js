@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
 	padding: 1.5rem 0;
@@ -13,4 +13,4 @@ export const Wrapper = styled.div`
 	a:hover,a:active {
 		color: ${props => props.theme.colors.text.main};
 	}
-`
+`;

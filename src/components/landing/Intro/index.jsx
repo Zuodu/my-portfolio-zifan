@@ -1,11 +1,10 @@
-import React from 'react'
-import TextLoop from 'react-text-loop'
-import { Button, Heading, Txt } from 'rendition'
-import { FormattedMessage } from 'react-intl'
-import { Container } from 'Common'
-import nerd from 'Static/illustrations/nerd.svg'
-import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles'
-
+import React from "react";
+import TextLoop from "react-text-loop";
+import { Button, Heading, Txt } from "rendition";
+import { FormattedMessage } from "react-intl";
+import { Container } from "Common";
+import nerd from "Static/illustrations/nerd.svg";
+import { Details, IntroWrapper, Thumbnail, Wrapper } from "./styles";
 
 
 export const Intro = () => (
@@ -33,4 +32,4 @@ export const Intro = () => (
 		</IntroWrapper>
 		<div className="icon-scroll" />
 	</Wrapper>
-)
+);

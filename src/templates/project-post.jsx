@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react";
 import { FormattedMessage } from "react-intl";
-import { Container } from 'Common'
-import Img from "gatsby-image"
-import { Heading } from 'rendition'
-import en_messages from 'I18n/en'
-import fr_messages from 'I18n/fr'
-import { BaseLayout } from 'Layout/baseLayout'
-import { graphql } from 'gatsby'
-import { ProjectsPageWrapper, PostHead, Description, ContentSection } from './styles'
+import { Container } from "Common";
+import Img from "gatsby-image";
+import { Heading } from "rendition";
+import en_messages from "I18n/en";
+import fr_messages from "I18n/fr";
+import { BaseLayout } from "Layout/baseLayout";
+import { graphql } from "gatsby";
+import { ProjectsPageWrapper, PostHead, Description, ContentSection } from "./styles";
 
 const langStrategist = (lang) => {
 	switch (lang) {
-	case 'fr':
+	case "fr":
 		return fr_messages;
-	case 'en':
+	case "en":
 		return en_messages;
 	default:
-		return en_messages
+		return en_messages;
 	}
 };
 
@@ -67,7 +67,7 @@ export default function Template(props) {
 				</ProjectsPageWrapper>
 			</Container>
 		</BaseLayout>
-	)
+	);
 }
 
 export const pageQuery = graphql`
@@ -82,15 +82,15 @@ export const pageQuery = graphql`
             frontmatter {
                 date(formatString: "MM/YYYY")
                 title
-								subtitle
-								topImage {
-									childImageSharp {
-										fluid(maxWidth: 590) {
-											...GatsbyImageSharpFluid
-											presentationWidth
-									}
-								}
-							}
+                subtitle
+                topImage {
+                    childImageSharp {
+                        fluid(maxWidth: 590) {
+                            ...GatsbyImageSharpFluid
+                            presentationWidth
+                        }
+                    }
+                }
             }
         }
     }

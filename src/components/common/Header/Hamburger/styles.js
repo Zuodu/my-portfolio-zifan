@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
 	z-index: 12;
@@ -14,8 +14,8 @@ export const Wrapper = styled.div`
 	}
 
 	${({ sidebar }) =>
-		sidebar &&
-		`
+	sidebar &&
+	`
 			right: 18%;
 			top: 1.4rem;
 		
@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 				right: 66%;
 			}
 	`}
-`
+`;
 
 export const Bar = styled.div`
 	width: 1.6rem;
@@ -44,23 +44,23 @@ export const Bar = styled.div`
 	}
 
 	${({ top, sidebar }) =>
-		top &&
-		sidebar &&
-		`
+	top &&
+	sidebar &&
+	`
 		transform: translateY(8px) rotate(-135deg);
 	`}
 
 	${({ mid, sidebar }) =>
-		mid &&
-		sidebar &&
-		`
+	mid &&
+	sidebar &&
+	`
 			transform: scale(0);
 	`}
 
 	${({ bottom, sidebar }) =>
-		bottom &&
-		sidebar &&
-		`
+	bottom &&
+	sidebar &&
+	`
 			transform: translateY(-6px) rotate(-45deg);
 	`}
-`
+`;
