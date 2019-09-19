@@ -4,6 +4,6 @@ import { LayoutFr } from 'Layout'
 
 export default (props) => (
 	<LayoutFr location={props.location}>
-		<SEO />
+		<SEO title="" location="" />
 	</LayoutFr>
 )

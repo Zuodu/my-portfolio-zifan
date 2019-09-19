@@ -4,26 +4,29 @@ module.exports = {
 	author: 'Zifan Yao',
 	url: 'https://zifan.fr',
 	legalName: 'Zifan Yao',
-	defaultDescription: 'Software Engineer gratuated from INSA Lyon',
+	defaultDescription: 'Zifan\'s blog - engineer from INSA Lyon',
 	socialLinks: {
 		github: 'https://github.com/zuodu',
 		linkedin: 'https://www.linkedin.com/in/zifan-yao',
+		facebook: 'https://www.facebook.com/zifan.yao1',
+		instagram: 'https://www.instagram.com/yao_zifan'
 	},
 	googleAnalyticsID: 'UA-147839131-1',
-	themeColor: '#51bfff',
-	backgroundColor: '#e5e4ec',
+	themeColor: '#4391F9',
+	backgroundColor: '#fbfbfb',
 	social: {
 		linkedin: 'zifan-yao',
 		github: 'zuodu',
 	},
 	address: {
-		city: 'Bergerac',
-		region: 'Aquitaire',
+		city: 'Paris',
+		region: 'Ile-de-France',
 		country: 'France',
-		zipCode: '24100',
+		zipCode: '75000',
 	},
 	contact: {
-		email: 'contact@zifan.fr'
+		email: 'contact@zifan.fr',
+		phone: '0033-614516736'
 	},
 	foundingDate: '2019',
 	recaptcha_key: '6LeXLrgUAAAAAGx23B5NbD-DYNRnSph_EMXk9dpv',

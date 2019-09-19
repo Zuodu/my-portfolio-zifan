@@ -11,7 +11,7 @@ const colors = {
 	white: '#f5f5f5',
 	background: {
 		main: '#1d2331',
-		light: 'rgba(40,46,61,0.71)',
+		light: 'rgba(42,51,66,0.71)',
 		dark: '#0b1a2a'
 	},
 	text: {
@@ -40,7 +40,7 @@ const colors = {
 	quartenary: {
 		main: '#0a91ab',
 		light: '#0a91ab',
-		dark: '#0a6273',
+		dark: 'rgba(10,98,115,0.75)',
 	},
 	danger: {
 		main: '#FF423D',
@@ -86,7 +86,7 @@ const colors = {
 		main: '#d3d6db',
 	},
 	gray: {
-		main: '#222831',
+		main: '#303741',
 		light: '#303841',
 		dark: '#0a0e15',
 	},
@@ -106,7 +106,7 @@ export default {
 	global: {
 		font: {
 			family: font,
-			size: '14px',
+			size: '16px',
 			height: 1.5,
 		},
 		control: {
@@ -219,7 +219,7 @@ export default {
 	},
 	text: {
 		medium: {
-			size: '14px',
+			size: '16px',
 			height: '1.5',
 		},
 	},

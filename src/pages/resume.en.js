@@ -4,6 +4,6 @@ import { LayoutEn } from 'Layout'
 
 export default (props) => (
 	<LayoutEn location={props.location}>
-		<SEO />
+		<SEO title="" location="" />
 	</LayoutEn>
 )

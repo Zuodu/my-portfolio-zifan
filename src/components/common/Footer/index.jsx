@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container } from 'Common'
 import { FormattedMessage } from 'react-intl'
-import { Heading, Flex as FlexRen } from 'rendition'
-import { Wrapper, Flex, Links, Details } from './styles'
+import { Heading } from 'rendition'
+import { Wrapper, Flex, Links, Details, BetterFlex } from './styles'
 import social from './social.json'
 
 export const Footer = () => (
@@ -10,7 +10,7 @@ export const Footer = () => (
 		<Flex as={Container}>
 			<Details>
 				<Heading.h4 color='white'><FormattedMessage id="name" /></Heading.h4>
-				<FlexRen alignItems="center" color='white'>
+				<BetterFlex alignItems="center" color='white'>
 					<span>
 						<FormattedMessage id="rights" />
 					</span>
@@ -25,7 +25,7 @@ export const Footer = () => (
 					<FormattedMessage id="hostedOn" /> &nbsp;
 					<img width="20" style={{ margin: 0 }} src="/icons/netlify.svg" alt="Netlify" />
 					&nbsp;.
-				</FlexRen>
+				</BetterFlex>
 			</Details>
 			<Links>
 				{social.map(({ id, name, link, icon }) => (

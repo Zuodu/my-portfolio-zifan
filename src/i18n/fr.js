@@ -2,10 +2,10 @@ module.exports = {
 	'rights': '© Tous droits réservés',
 	'name': 'Zifan Yao',
 	'job': 'Ingénieur Informatique',
-	'about': 'À propos',
+	'about': 'Voir CV',
 	'projects': 'Projets',
 	'contact': 'Contact',
-	'gallery': 'Gallerie',
+	'gallery': 'Galerie',
 	'resume': 'CV',
 	'hello': 'Bonjour !',
 	'intro1': 'Je cherche du travail dans l\'informatique.',
@@ -18,11 +18,16 @@ module.exports = {
 	'fr': 'Français',
 	'en': 'English',
 	'welcome': 'Bienvenue !',
-	'thanks': 'Merci d\'avoir mon site web ! 💜',
+	'thanks': 'Merci d\'avoir visité mon site web ! 💜',
 	'about1': 'J\'ai été diplômé à l\'INSA de Lyon en Septembre 2019, spécialité Informatique et Mathématiques, après avoir réalisé mon programme d\'échange académique à l\'Université de Tokyo.',
 	"about2": "Quand j'étais petit, comme beaucoup d'autres, j'adorais jouer sur l'ordinateur. Cela n'a pas changé avec les années " +
 		"et aujourd'hui, je suis passionné par tout ce qui touche à l'informatique. Assis devant un écran pendant des heures et des heures, certains trouvent cela pénible. Moi, je ne demande que ça !",
 	"about4": "Mais assez parlé, je vous laisse découvrir mon profil en détails :",
 	"seeResume": "Lire mon CV",
-	"contactTitle": "Faisons connaissance !"
-}
+	"contactTitle": "Faisons connaissance !",
+	"projectType": "Type de projet",
+	"projectSkills": "Compétences développées",
+	"projectLocation": "Localisation",
+	"projectTime": "Période",
+	"contactMe": "Mes coordonnées"
+};

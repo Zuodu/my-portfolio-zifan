@@ -7,7 +7,7 @@ import { Input } from 'Common'
 import { recaptcha_key } from 'Data'
 import { Error, Center, InputField } from './styles'
 
-const ContactForm = ({
+export const ContactForm = ({
 											 setFieldValue,
 											 isSubmitting,
 											 values,

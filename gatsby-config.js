@@ -22,6 +22,7 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-netlify',
 		'gatsby-plugin-offline',
+		'gatsby-transformer-yaml',
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
@@ -79,7 +80,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-web-font-loader',
 			options: {
 				google: {
-					families: ['Arvo:400,700', 'Cabin:400,700'],
+					families: ['Arvo:400,700', 'Cabin:400,700', 'Montserrat'],
 				},
 			},
 		},
@@ -91,15 +92,12 @@ module.exports = {
 				langKeyDefault: config.defaultLangKey,
 				prefixDefault: true,
 				markdownRemark: {
-					postPage: 'src/templates/project-post.js',
+					postPage: 'src/templates/project-post.jsx',
 					query: `
 					{
 						allMarkdownRemark {
 							edges {
 								node {
-									frontmatter {
-										path
-									}
 									fields {
 										slug
 										langKey
@@ -110,18 +108,6 @@ module.exports = {
 					}
 					`,
 				},
-			},
-		},
-		{
-			resolve: 'gatsby-source-graphql',
-			options: {
-				typeName: 'GitHub',
-				fieldName: 'github',
-				url: 'https://api.github.com/graphql',
-				headers: {
-					Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-				},
-				fetchOptions: {},
 			},
 		},
 		{
@@ -166,7 +152,7 @@ module.exports = {
 					Common: path.resolve(__dirname, 'src/components/common'),
 					Layout: path.resolve(__dirname, 'src/components/common/Layout'),
 					Static: path.resolve(__dirname, 'static'),
-					Assets: path.resolve(__dirname, 'src/assets/'),
+					Assets: path.resolve(__dirname, 'src/assets'),
 					Theme: path.resolve(__dirname, 'src/components/theme'),
 					Data: path.resolve(__dirname, 'src/data/config'),
 					I18n: path.resolve(__dirname, 'src/i18n'),

@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Cabin', Helvetica, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-
+    overflow-y: scroll;
     article,
     aside,
     details,
@@ -48,19 +48,13 @@ export const GlobalStyle = createGlobalStyle`
     abbr[title] {
       border-bottom: none;
       text-decoration: underline;
-      text-decoration: underline dotted;
     }
     b,
     strong {
       font-weight: inherit;
-      font-weight: bolder;
     }
     dfn {
       font-style: italic;
-    }
-    h1 {
-      font-size: 2em;
-      margin: 0.67em 0;
     }
     mark {
       background-color: #ff0;
@@ -82,9 +76,6 @@ export const GlobalStyle = createGlobalStyle`
     sup {
       top: -0.5em;
     }
-    img {
-  		border-radius: 20px;
-    }
     svg:not(:root) {
       overflow: hidden;
     }
@@ -99,8 +90,12 @@ export const GlobalStyle = createGlobalStyle`
       margin: 1em 40px;
     }
     hr {
+      padding: 0;
+      margin: 1rem 0 0;
+      background: #93969b;
+      border: none;
+      height: 1px;
       box-sizing: content-box;
-      height: 0;
       overflow: visible;
     }
     button,
@@ -182,29 +177,10 @@ export const GlobalStyle = createGlobalStyle`
       -webkit-appearance: button;
       font: inherit;
     }
-    html {
-      font: 112.5%/1.45em georgia, serif;
-      box-sizing: border-box;
-      overflow-y: scroll;
-    }
-    * {
-      box-sizing: inherit;
-    }
-    *:before {
-      box-sizing: inherit;
-    }
-    *:after {
-      box-sizing: inherit;
-    }
-    img {
-      max-width: 100%;
-      padding: 0;
-      margin: 0 0 1.45rem;
-    }
     h1 {
     	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 3rem 0 0;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -214,7 +190,7 @@ export const GlobalStyle = createGlobalStyle`
     h2 {
       font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 2.45rem 0 0;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -224,7 +200,7 @@ export const GlobalStyle = createGlobalStyle`
     h3 {
     	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 2.45rem 0 0;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -234,7 +210,7 @@ export const GlobalStyle = createGlobalStyle`
     h4 {
     	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 2.45rem 0 0;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -244,7 +220,7 @@ export const GlobalStyle = createGlobalStyle`
     h5 {
     	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.45rem 0 0 ;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -254,7 +230,7 @@ export const GlobalStyle = createGlobalStyle`
     h6 {
     	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.45rem 0 0;
       color: inherit;
       font-weight: bold;
       text-rendering: optimizeLegibility;
@@ -263,7 +239,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     hgroup {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.45rem 0 0;
     }
     ul {
       padding: 0;
@@ -279,22 +255,22 @@ export const GlobalStyle = createGlobalStyle`
     }
     dl {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     dd {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     p {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     figure {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     pre {
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
       font-size: 0.85rem;
       line-height: 1.42;
       background: hsla(0, 0%, 0%, 0.04);
@@ -305,42 +281,36 @@ export const GlobalStyle = createGlobalStyle`
     }
     table {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
       font-size: 1rem;
       line-height: 1.45rem;
       border-collapse: collapse;
       width: 100%;
+      border-color: #93969b;
     }
     fieldset {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     blockquote {
       padding: 0;
-      margin: 0 1.45rem 1.45rem;
+      margin: 0 1.1rem 1.45rem;
     }
     form {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     noscript {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     iframe {
       padding: 0;
-      margin: 0 0 1.45rem;
-    }
-    hr {
-      padding: 0;
-      margin: 0 0 calc(1.45rem - 1px);
-      background: hsla(0, 0%, 0%, 0.2);
-      border: none;
-      height: 1px;
+      margin: 1.1rem 0 0;
     }
     address {
       padding: 0;
-      margin: 0 0 1.45rem;
+      margin: 1.1rem 0 0;
     }
     b {
       font-weight: bold;
@@ -485,5 +455,8 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
       }
     }
+    .gatsby-image-wrapper {
+      box-shadow: 0 3px 10px -3px black;
+    }
   }
-`
+`;

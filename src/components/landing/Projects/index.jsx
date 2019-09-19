@@ -1,75 +1,64 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Container, Card } from 'Common'
-import { Heading } from 'rendition'
-import { FormattedMessage } from 'react-intl'
-import starIcon from 'Static/icons/star.svg'
-import forkIcon from 'Static/icons/fork.svg'
-import { Wrapper, Grid, Item, Content, Stats } from './styles'
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Container, Card } from "Common";
+import { Heading, Tag, Txt } from "rendition";
+import { FormattedMessage } from "react-intl";
+import { Wrapper, Grid, Item, Content, Stats } from "./styles";
 
-export const Projects = () => {
+export const Projects = ({ hideTitle, lang }) => {
 	const {
-		github: {
-			repositoryOwner: {
-				repositories: { edges },
-			},
-		},
+		allMarkdownRemark: {edges}
 	} = useStaticQuery(graphql`
-		{
-			github {
-				repositoryOwner(login: "zuodu") {
-					repositories(
-						first: 8
-						orderBy: { field: STARGAZERS, direction: DESC }
-					) {
-						edges {
-							node {
-								id
-								name
-								url
-								description
-								stargazers {
-									totalCount
-								}
-								forkCount
+			{
+				allMarkdownRemark(filter: {frontmatter: {directory: {eq: "projects"}}}) {
+					edges {
+						node {
+							frontmatter {
+								title
+								subtitle
+								tags
 							}
+							fields {
+								slug
+								langKey
+							}
+							id
+							excerpt
 						}
 					}
 				}
 			}
-		}
-	`)
+		`);
+	const array = edges.filter((value) => {
+		return value.node.fields.langKey === lang;
+	});
 	return (
 		<Wrapper as={Container} id="projects">
-			<Heading.h3 mb={3}><FormattedMessage id="projects" /></Heading.h3>
+			<Heading.h3 mb={3} style={{ display: hideTitle ? "none" : "inherit" }}><FormattedMessage
+				id="projects"
+			/></Heading.h3>
 			<Grid>
-				{edges.map(({ node }) => (
+				{array.map(({ node }) => (
 					<Item
 						key={node.id}
 						as="a"
-						href={node.url}
-						target="_blank"
-						rel="noopener noreferrer"
+						href={node.fields.slug}
 					>
 						<Card>
 							<Content>
-								<h4>{node.name}</h4>
-								<p>{node.description}</p>
+								<h4>{node.frontmatter.title}</h4>
+								<p>{node.frontmatter.subtitle}</p>
+								<small>ehehe</small>
 							</Content>
 							<Stats>
-								<div>
-									<img src={starIcon} alt="stars" />
-									<span>{node.stargazers.totalCount}</span>
-								</div>
-								<div>
-									<img src={forkIcon} alt="forks" />
-									<span>{node.forkCount}</span>
-								</div>
+								{node.frontmatter.tags.map(tag => (
+									<Tag mr={1} name={tag} key={tag} />
+								))}
 							</Stats>
 						</Card>
 					</Item>
 				))}
 			</Grid>
 		</Wrapper>
-	)
-}
+	);
+};

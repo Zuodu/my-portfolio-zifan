@@ -2,7 +2,7 @@ module.exports = {
 	'rights': 'All rights reserved',
 	'name': 'Zifan Yao',
 	'job': 'Software Engineer',
-	'about': 'About',
+	'about': 'Resume',
 	'projects': 'Projects',
 	'contact': 'Contact',
 	'gallery': 'Gallery',
@@ -25,4 +25,9 @@ module.exports = {
 	'about4': 'If you feel like my profile might interest you, please feel free to look at my resume :',
 	'seeResume': 'See my resume',
 	'contactTitle': 'Let\'s get acquainted !',
-}
+	"projectType": "Project type",
+	"projectSkills": "Skills involved",
+	"projectLocation": "Location",
+	"projectTime": "Period",
+	"contactMe": "My contact informations"
+};

@@ -1,9 +1,7 @@
 ---
 title: My First Post
+subtitle: project de fin d'étude
 date: 2019-07-10
-path: /fr/my-first-post
+topImage: ../../assets/projects/portrait.jpg
+directory: blog
 ---
-
-## This is my first Gatsby post
-it's writting in markdown
-**Français**

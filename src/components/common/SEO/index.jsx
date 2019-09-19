@@ -34,7 +34,7 @@ export const SEO = ({
 			"@type": "ContactPoint",
 			"email": "${contact.email}",
 			"telephone": "${contact.phone}",
-			"contactType": "customer service"
+			"contactType": "inquiry"
 		}],
 		"address": {
 			"@type": "PostalAddress",
@@ -44,17 +44,16 @@ export const SEO = ({
 			"postalCode": "${address.zipCode}"
 		},
 		"sameAs": [
-			"${socialLinks.twitter}",
-			"${socialLinks.google}",
-			"${socialLinks.youtube}",
 			"${socialLinks.linkedin}",
 			"${socialLinks.instagram}",
-			"${socialLinks.github}"
+			"${socialLinks.github}",
+			"${socialLinks.facebook}
 		]
-  	}`
+  	}`;
 
 	return (
 		<Helmet>
+			<meta charSet="utf-8" />
 			<meta name="description" content={description} />
 			<meta name="image" content={Thumbnail} />
 
@@ -74,7 +73,7 @@ export const SEO = ({
 			<script type="application/ld+json">{structuredDataOrganization}</script>
 			<link rel="publisher" href={socialLinks.google} />
 			<title>{title}</title>
-			<html lang="en" dir="ltr" />
+			<html lang="fr" dir="ltr" />
 		</Helmet>
 	)
 }

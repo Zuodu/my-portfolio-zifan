@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Flex as FlexRen} from 'rendition'
 
 export const Wrapper = styled.div`
 	padding: 28rem 0 4rem 0;
@@ -19,6 +20,7 @@ export const Flex = styled.div`
 	justify-content: space-between;
 
 	@media (max-width: 680px) {
+	padding-top: 2rem;
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
@@ -48,3 +50,9 @@ export const Details = styled.div`
 		margin-bottom: 2rem;
 	}
 `
+
+export const BetterFlex = styled(FlexRen)`
+  @media (max-width: 680px) {
+    display: block;
+  }
+`;

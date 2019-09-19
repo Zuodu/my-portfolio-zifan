@@ -5,12 +5,11 @@ import { Container } from 'Common'
 import configData from 'Data'
 import { Box, Heading, Txt, Button } from 'rendition'
 import { FormattedMessage } from 'react-intl'
-import { getLangFromPath } from 'Utils/pathUtils'
 import { Wrapper, AboutWrapper, Details, Thumbnail } from './styles'
 import '../Intro/iconScroll.css'
 
 
-export const About = ({path}) => (
+export const About = ({lang}) => (
 	<StaticQuery
 		query={graphql`
     query {
@@ -28,7 +27,7 @@ export const About = ({path}) => (
 				<AboutWrapper as={Container}>
 					<Thumbnail>
 						<Box p={5}>
-							<Img fluid={data.imagePortrait.childImageSharp.fluid} title="Myself in Shanghai" />
+							<Img fluid={data.imagePortrait.childImageSharp.fluid} title="Myself in Shanghai" alt="My portrait" />
 						</Box>
 					</Thumbnail>
 					<Details>
@@ -37,11 +36,11 @@ export const About = ({path}) => (
 						<Txt fontSize={2} m={1}><FormattedMessage id="about1" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about2" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about4" /></Txt>
-						<Button info href={`/${getLangFromPath(path)}/resume/${configData.resumeFileName}`} mt={3}>
+						<Button info href={`/${lang}/resume/${configData.resumeFileName}`} mt={3}>
 							<FormattedMessage id="seeResume" />
 						</Button>
 						{/* todo: display when page is ready */}
-						<Button info href={`${getLangFromPath(path)}/resume`} mt={3} style={{display: 'none'}}>
+						<Button info href={`${lang}/resume`} mt={3} style={{display: 'none'}}>
 							<FormattedMessage id="seeResume" />
 						</Button>
 					</Details>

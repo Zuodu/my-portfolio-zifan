@@ -23,10 +23,7 @@ const getThemeIcon = (darkMode) => {
 
 const redirectStrategist = (linkTo, pathname) => {
 	const lang = getLangFromPath(pathname)
-	if (linkTo === 'about') {
-		return `/${lang}/resume/${data.resumeFileName}`
-	}
-	return `/${lang}/${linkTo}`
+	return `/${lang}${linkTo}`
 }
 
 const showIfHome = (pathname, isHome) => {
@@ -75,13 +72,15 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs }) => {
 	return (
 		<Wrapper desktop={desktop}>
 			<div style={showIfHome(currentLocation, false)}>
-				<a href={redirectStrategist('about', currentLocation)}><FormattedMessage id="about" /></a>
-				<a href={redirectStrategist('projects', currentLocation)}><FormattedMessage id="projects" /></a>
-				<a href={redirectStrategist('contact', currentLocation)}><FormattedMessage id="contact" /></a>
+				<a href={redirectStrategist(`/resume/${data.resumeFileName}`, currentLocation)}><FormattedMessage id="about" /></a>
+				<a href={redirectStrategist('/projects', currentLocation)}><FormattedMessage id="projects" /></a>
+				<a href={redirectStrategist('/gallery', currentLocation)}><FormattedMessage id="gallery" /></a>
+				<a href={redirectStrategist('/contact', currentLocation)}><FormattedMessage id="contact" /></a>
 			</div>
 			<div style={showIfHome(currentLocation, true)}>
 				<AnchorLink href='#about'><FormattedMessage id="about" /></AnchorLink>
 				<AnchorLink href='#projects'><FormattedMessage id="projects" /></AnchorLink>
+				<a href={redirectStrategist('/gallery', currentLocation)}><FormattedMessage id="gallery" /></a>
 				<AnchorLink href='#contact'><FormattedMessage id="contact" /></AnchorLink>
 			</div>
 			<DropDownButton

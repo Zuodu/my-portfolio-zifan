@@ -11,7 +11,7 @@ const colors = {
 	white: '#f5f5f5',
 	background: {
 		main: '#fbfbfb',
-		light: 'rgba(255,255,255,0.71)',
+		light: 'rgba(255,255,255,0.80)',
 		dark: '#e1e1e1'
 	},
 	text: {
@@ -40,7 +40,7 @@ const colors = {
 	quartenary: {
 		main: '#d9e0e6',
 		light: '#ebf2f8',
-		dark: '#d9e0e6',
+		dark: 'rgba(217,224,230,0.68)',
 	},
 	danger: {
 		main: '#FF423D',
@@ -109,7 +109,7 @@ export default {
 	global: {
 		font: {
 			family: font,
-			size: '14px',
+			size: '16px',
 			height: 1.5,
 		},
 		control: {
@@ -222,7 +222,7 @@ export default {
 	},
 	text: {
 		medium: {
-			size: '14px',
+			size: '16px',
 			height: '1.5',
 		},
 	},

@@ -57,5 +57,5 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
 }
 
 BaseLayout.propTypes = {
-	children: PropTypes.array,
+	children: PropTypes.array || PropTypes.object,
 }
