@@ -20,8 +20,8 @@ export const Intro = () => (
 						<Txt>Guten Tag !</Txt>
 					</TextLoop>
 				</Heading.h1>
-				<Heading.h4 color="text.light" mb={2}><FormattedMessage id="intro1" /></Heading.h4>
-				<Heading.h4 color="text.light" mb={3}><FormattedMessage id="intro2" /></Heading.h4>
+				<Heading.h4 mb={2}><FormattedMessage id="intro1" /></Heading.h4>
+				<Heading.h4 mb={3}><FormattedMessage id="intro2" /></Heading.h4>
 				<Button primary href="#about">
 					<FormattedMessage id="view_more" />
 				</Button>

@@ -1,6 +1,7 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Button, DropDownButton, useTheme } from "rendition";
+import {Link} from "gatsby";
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
 import { FormattedMessage } from "react-intl";
 import { Style } from "radium";
@@ -27,8 +28,7 @@ const redirectStrategist = (linkTo, pathname) => {
 };
 
 const showIfHome = (isHome, showOnHome) => {
-	switch (isHome) {
-	case true:
+	if(isHome) {
 		if (showOnHome) {
 			return {};
 		}
@@ -37,25 +37,16 @@ const showIfHome = (isHome, showOnHome) => {
 				display: "none"
 			}
 		);
-	case false:
-		if (showOnHome) {
-			return (
-				{
-					display: "none"
-				}
-			);
-		}
-		return {};
-	default:
-		if (showOnHome) {
-			return {};
-		}
+	} 
+	if (showOnHome) {
 		return (
 			{
 				display: "none"
 			}
 		);
 	}
+	return {};
+	
 };
 
 const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs, isHome }) => {
@@ -65,15 +56,15 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs, isHome }) => {
 	return (
 		<Wrapper desktop={desktop}>
 			<div style={showIfHome(isHome, false)}>
-				<a href={redirectStrategist(`/resume/${data.resumeFileName}`, currentLocation)}><FormattedMessage id="about" /></a>
-				<a href={redirectStrategist("/projects", currentLocation)}><FormattedMessage id="projects" /></a>
-				<a href={redirectStrategist("/gallery", currentLocation)}><FormattedMessage id="gallery" /></a>
-				<a href={redirectStrategist("/contact", currentLocation)}><FormattedMessage id="contact" /></a>
+				<a href={redirectStrategist(`/resume/${data.resumeFileName}`, currentLocation)}><FormattedMessage id="seeResume" /></a>
+				<Link to={redirectStrategist("/projects", currentLocation)}><FormattedMessage id="projects" /></Link>
+				<Link to={redirectStrategist("/gallery", currentLocation)}><FormattedMessage id="gallery" /></Link>
+				<Link to={redirectStrategist("/contact", currentLocation)}><FormattedMessage id="contact" /></Link>
 			</div>
 			<div style={showIfHome(isHome, true)}>
 				<AnchorLink href='#about'><FormattedMessage id="about" /></AnchorLink>
 				<AnchorLink href='#projects'><FormattedMessage id="projects" /></AnchorLink>
-				<a href={redirectStrategist("/gallery", currentLocation)}><FormattedMessage id="gallery" /></a>
+				<Link to={redirectStrategist("/gallery", currentLocation)}><FormattedMessage id="gallery" /></Link>
 				<AnchorLink href='#contact'><FormattedMessage id="contact" /></AnchorLink>
 			</div>
 			<DropDownButton
@@ -99,7 +90,7 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs, isHome }) => {
 				typeof window !== `undefined` && window.localStorage.setItem("darkMode", !getDarkMode);
 				setDarkMode(!getDarkMode);
 				typeof window !== `undefined` && window.document.location.reload();
-			}} plain fontSize={3} icon={getThemeIcon(getDarkMode)}
+			}} plain fontSize={3} icon={getThemeIcon(getDarkMode)} tooltip={{text: 'Page refresh !', placement: 'right'}}
 			/>
 		</Wrapper>
 	);

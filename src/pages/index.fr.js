@@ -4,7 +4,7 @@ import { LayoutFr } from 'Layout';
 import { Intro, About, ContactFr, Projects } from 'Components/landing';
 
 export default props => (
-	<LayoutFr location={props.location}>
+	<LayoutFr location={props.location} isHome>
 		<SEO title="Blog de Zifan" location="/fr" />
 		<Intro />
 		<About lang="fr" />
