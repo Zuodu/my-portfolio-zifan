@@ -24,7 +24,7 @@ export const Item = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+  box-shadow: 0 2px 10px -5px black;
 
   h4 {
     margin-top: ${props => props.theme.space[1]}px;
@@ -42,6 +42,7 @@ export const Content = styled.div`
 `;
 
 export const Stats = styled.div`
+	font-size: ${props => props.theme.fontSizes[0]}px;
   display: flex;
   align-items: center;
 

@@ -10,7 +10,7 @@ import lightTheme from "Themes/light";
 import darkTheme from "Themes/dark";
 import { GlobalStyle } from "./styles";
 
-export const BaseLayout = ({ children, location, i18nMessages }) => {
+export const BaseLayout = ({ children, location, i18nMessages, isHome }) => {
 	let storedDarkMode;
 	typeof window !== `undefined` ? storedDarkMode = window.localStorage.getItem("darkMode") : storedDarkMode = null;
 	const [isDarkMode, setIsDarkMode] = useState(storedDarkMode === "true");
@@ -39,16 +39,14 @@ export const BaseLayout = ({ children, location, i18nMessages }) => {
 				}));
 				return (
 					<IntlProvider locale={langKey} messages={i18nMessages}>
-						<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-							<Provider theme={isDarkMode ? darkTheme : lightTheme}>
-								<GlobalStyle />
-								<Box bg="background.main">
-									<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} langs={langsMenu} home={homeLink} />
-									{children}
-									<Footer />
-								</Box>
-							</Provider>
-						</ThemeProvider>
+						<Provider theme={isDarkMode ? darkTheme : lightTheme}>
+							<GlobalStyle />
+							<Box bg="background.main">
+								<Header getDarkMode={isDarkMode} setDarkMode={setIsDarkMode} langs={langsMenu} home={homeLink} isHome={isHome} />
+								{children}
+								<Footer />
+							</Box>
+						</Provider>
 					</IntlProvider>
 				);
 			}}

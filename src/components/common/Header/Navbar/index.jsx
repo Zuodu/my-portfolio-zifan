@@ -6,7 +6,7 @@ import NavbarLinks from "../NavbarLinks";
 import { Wrapper } from "./styles";
 
 
-const Navbar = ({ getDarkMode, setDarkMode, langs, home }) => (
+const Navbar = ({ getDarkMode, setDarkMode, langs, home, isHome }) => (
 	<Wrapper as={Container}>
 		<Link color="text.main" href={home}>
 			<Heading.h4>
@@ -16,7 +16,7 @@ const Navbar = ({ getDarkMode, setDarkMode, langs, home }) => (
 				<FormattedMessage id="job" />
 			</Txt>
 		</Link>
-		<NavbarLinks desktop getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} />
+		<NavbarLinks desktop getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} isHome={isHome} />
 	</Wrapper>
 );
 

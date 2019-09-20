@@ -6,17 +6,17 @@ import Hamburger from "./Hamburger";
 import Sidebar from "./Sidebar";
 import { Overlay, Wrapper } from "./styles";
 
-export const Header = ({ getDarkMode, setDarkMode, langs, home }) => {
+export const Header = ({ getDarkMode, setDarkMode, langs, home, isHome }) => {
 	const [sidebar, toggle] = useState(false);
 	return (
 		<Headroom>
 			<Wrapper>
 				<Box bg='background.light'>
 					<Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
-					<Navbar getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} home={home} />
+					<Navbar getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} home={home} isHome={isHome} />
 					<Hamburger sidebar={sidebar} toggle={toggle} />
 					<Sidebar sidebar={sidebar} toggle={toggle} getDarkMode={getDarkMode} setDarkMode={setDarkMode}
-									 langs={langs}
+									 langs={langs} isHome={isHome}
 					/>
 				</Box>
 			</Wrapper>
