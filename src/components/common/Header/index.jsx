@@ -14,11 +14,11 @@ export const Header = ({ getDarkMode, setDarkMode, langs, home, isHome }) => {
 				<Wrapper>
 					<Box bg='background.light'>
 						<Navbar getDarkMode={getDarkMode} setDarkMode={setDarkMode} langs={langs} home={home} isHome={isHome} />
+						<Hamburger sidebar={sidebar} toggle={toggle} />
 					</Box>
 				</Wrapper>
 			</Headroom>
 			<Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
-			<Hamburger sidebar={sidebar} toggle={toggle} />
 			<Sidebar sidebar={sidebar} toggle={toggle} getDarkMode={getDarkMode} setDarkMode={setDarkMode}
 							 langs={langs} isHome={isHome}
 			/>
