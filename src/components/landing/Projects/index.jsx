@@ -14,6 +14,7 @@ export const Projects = ({ hideTitle, lang }) => {
               edges {
                   node {
                       frontmatter {
+													order
                           title
                           subtitle
                           tags
@@ -32,6 +33,7 @@ export const Projects = ({ hideTitle, lang }) => {
 	const array = edges.filter((value) => {
 		return value.node.fields.langKey === lang;
 	});
+	array.sort((a,b) =>  a.node.frontmatter.order - b.node.frontmatter.order);
 	return (
 		<Wrapper as={Container} id="projects">
 			<Heading.h3 mb={3} style={{ display: hideTitle ? "none" : "inherit" }}><FormattedMessage

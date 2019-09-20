@@ -1,16 +1,19 @@
 - image: './japan/nature.jpg'
+  order: 1
   title: Japan is great
   fr: description française
   en: english description
   date: 12 2019
   category: japan
 - image: './japan/nature.jpg'
+  order: 2
   title: This is fun
   fr: description française
   en: english description
   date: 12 2019
   category: japan
 - image: './japan/nature.jpg'
+  order: 3
   title: another one
   fr: description française
   en: english description

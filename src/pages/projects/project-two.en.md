@@ -1,11 +1,16 @@
 ---
-title: My First Post
-subtitle: project de s
+order: 2
+title: My Second Post
+subtitle: projet deux
 date: 2019-07-10
+directory: projects
 topImage: ../../assets/projects/portrait.jpg
-directory: blog
+period: 6
+tags:
+  - Javascript
+  - React
 ---
 
 ## This is my first Gatsby post
 it's writting in markdown
-**English**
+**Français**

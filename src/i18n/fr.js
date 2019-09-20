@@ -7,7 +7,6 @@ module.exports = {
 	contact: 'Contact',
 	gallery: 'Galerie',
 	resume: 'CV',
-	hello: 'Bonjour !',
 	intro1: "Je cherche du travail dans l'informatique.",
 	intro2: 'Découvrez mon profil !',
 	view_more: 'En savoir plus',

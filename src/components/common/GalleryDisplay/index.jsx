@@ -12,7 +12,7 @@ export const GalleryDisplay = ({ cat, lang }) => {
           allGalleryYaml {
               edges {
                   node {
-                      id
+                      order
                       title
                       fr
                       en
@@ -33,6 +33,7 @@ export const GalleryDisplay = ({ cat, lang }) => {
 	const array = edges.filter((value) => {
 		return value.node.category === cat;
 	});
+	array.sort((a,b) => a.node.order-b.node.order);
 	return (
 		<Wrapper>
 			<TitleFrame>
@@ -44,7 +45,7 @@ export const GalleryDisplay = ({ cat, lang }) => {
 			</TitleFrame>
 			<Grid>
 				{array.map(({ node }) => (
-					<Item key={node.id}>
+					<Item key={node.order}>
 						<div className="content">
 							<Image fluid={node.image.childImageSharp.fluid} />
 							<div className="content-overlay">
