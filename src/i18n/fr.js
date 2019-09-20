@@ -2,7 +2,7 @@ module.exports = {
 	rights: '© Tous droits réservés',
 	name: 'Zifan Yao',
 	job: 'Ingénieur Informatique',
-	about: 'À propos',
+	about: 'CV',
 	projects: 'Projets',
 	contact: 'Contact',
 	gallery: 'Galerie',
@@ -25,7 +25,7 @@ module.exports = {
     "Quand j'étais petit, comme beaucoup d'autres, j'adorais jouer sur l'ordinateur. Cela n'a pas changé avec les années " +
     "et aujourd'hui, je suis passionné par tout ce qui touche à l'informatique. Assis devant un écran pendant des heures et des heures, certains trouvent cela pénible. Moi, je ne demande que ça !",
 	about4: 'Mais assez parlé, je vous laisse découvrir mon profil en détails :',
-	seeResume: 'Mon CV',
+	seeResume: 'Voir mon CV',
 	contactTitle: 'Faisons connaissance !',
 	projectType: 'Type de projet',
 	projectSkills: 'Compétences développées',
