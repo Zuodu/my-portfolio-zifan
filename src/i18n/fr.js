@@ -21,9 +21,10 @@ module.exports = {
 	about1:
     "J'ai été diplômé à l'INSA de Lyon en Septembre 2019, spécialité Informatique et Mathématiques, après avoir réalisé mon programme d'échange académique à l'Université de Tokyo.",
 	about2:
-    "Quand j'étais petit, comme beaucoup d'autres, j'adorais jouer sur l'ordinateur. Cela n'a pas changé avec les années " +
-    "et aujourd'hui, je suis passionné par tout ce qui touche à l'informatique. Assis devant un écran pendant des heures et des heures, certains trouvent cela pénible. Moi, je ne demande que ça !",
-	about4: 'Mais assez parlé, je vous laisse découvrir mon profil en détails :',
+    "J'ai accumulé des expériences professionnelles en France et au Japon sous forme de stages en entreprise. J'ai également réalisé des travaux de recherche en laboratoire à l'Université de Tokyo. " +
+    "Je suis confiant en mes compétences de développement logiciel, management de projets et en communication.",
+	about3: 'Etant né en Chine et ayant grandi en France, je maîtrise le Français, l\'Anglais, le Chinois et le Japonais tout en continuant à apprendre l`Allemand.',
+	about4: 'Si mon profil vous intéresse, jetez un oeil à mon CV :',
 	seeResume: 'Voir mon CV',
 	contactTitle: 'Faisons connaissance !',
 	projectType: 'Type de projet',

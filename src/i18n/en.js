@@ -19,12 +19,13 @@ module.exports = {
 	welcome: 'Welcome !',
 	thanks: 'Thank you for visiting my website ! 💜',
 	about1:
-    'I graduated from INSA Lyon in September 2019 and obtained my M.E. in Software Engineering, after completing an exchange program with The University of Tokyo.',
+    'I graduated from INSA Lyon in September 2019 and obtained my M.E. in Software Engineering, after completing an exchange program in The University of Tokyo.',
 	about2:
-    'When I was a little kid, like many others, I liked to play on the computer. This did not change over the years ' +
-    'and today, I am passionate about everything related to IT. Sitting in front of a computer for hours, some would hate it. For me, I can only ask for more !',
-	about4:
-    'If my profile interests you, feel free to take a look at my resume :',
+    'I have accumulated working experience in French and Japanese companies from internships. I achieved also academic research work in The University of Tokyo. ' +
+    'I gained proven skills in software development, project management and communication.',
+	about3:
+    'Born in China and grew up in France, I am proficient in French, Chinese, English and Japanese. I have also basics in German.',
+	about4: 'If my profile interests you, feel free to take a look at my resume :',
 	seeResume: 'See my resume',
 	contactTitle: "Let's get acquainted !",
 	projectType: 'Project type',

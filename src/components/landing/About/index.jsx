@@ -35,6 +35,7 @@ export const About = ({ lang }) => (
 						<Txt fontSize={2} m={1}><FormattedMessage id="thanks" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about1" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about2" /></Txt>
+						<Txt fontSize={2} m={1}><FormattedMessage id="about3" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about4" /></Txt>
 						<Button info href={`/${lang}/resume/${configData.resumeFileName}`} mt={3}>
 							<FormattedMessage id="seeResume" />
