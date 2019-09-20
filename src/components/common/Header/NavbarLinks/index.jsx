@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl";
 import { Style } from "radium";
 import data from "Data";
 import { getLangFromPath } from "Utils/pathUtils";
-import { Wrapper } from "./styles";
+import { DynamicFlex, Wrapper } from "./styles";
 import SelectLanguage from "../SelectLanguage";
 
 
@@ -55,18 +55,18 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs, isHome }) => {
 	typeof window !== `undefined` ? currentLocation = window.location.pathname : null;
 	return (
 		<Wrapper desktop={desktop}>
-			<div style={showIfHome(isHome, false)}>
+			<DynamicFlex style={showIfHome(isHome, false)}>
 				<a href={redirectStrategist(`/resume/${data.resumeFileName}`, currentLocation)}><FormattedMessage id="about" /></a>
 				<Link to={redirectStrategist("/projects", currentLocation)}><FormattedMessage id="projects" /></Link>
 				<Link to={redirectStrategist("/gallery", currentLocation)}><FormattedMessage id="gallery" /></Link>
 				<Link to={redirectStrategist("/contact", currentLocation)}><FormattedMessage id="contact" /></Link>
-			</div>
-			<div style={showIfHome(isHome, true)}>
+			</DynamicFlex>
+			<DynamicFlex style={showIfHome(isHome, true)}>
 				<a href={redirectStrategist(`/resume/${data.resumeFileName}`, currentLocation)}><FormattedMessage id="about" /></a>
 				<AnchorLink href='#projects'><FormattedMessage id="projects" /></AnchorLink>
 				<Link to={redirectStrategist("/gallery", currentLocation)}><FormattedMessage id="gallery" /></Link>
 				<AnchorLink href='#contact'><FormattedMessage id="contact" /></AnchorLink>
-			</div>
+			</DynamicFlex>
 			<DropDownButton
 				className="lang-dropdown"
 				mr={2}

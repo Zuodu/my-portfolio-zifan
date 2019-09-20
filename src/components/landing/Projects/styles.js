@@ -45,7 +45,7 @@ export const Stats = styled.div`
 	font-size: ${props => props.theme.fontSizes[0]}px;
   display: flex;
   align-items: center;
-
+	padding-bottom: 1rem;
   div {
     display: flex;
 

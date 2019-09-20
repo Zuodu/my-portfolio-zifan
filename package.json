@@ -60,7 +60,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby clean && gatsby build",
-    "start": "gatsby develop -o",
+    "start": "gatsby develop -o -H 192.168.1.21 -p 8000",
     "format": "prettier --write \"src/**/*.js\"",
     "reset": "rm -rf .cache/ public/",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""

@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+
+export const DynamicFlex = styled.div`
+	@media (max-width: 960px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+`;
+
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -28,7 +37,9 @@ export const Wrapper = styled.div`
 			padding: 3rem;
 			display: flex;
 			flex-direction: column;
-
+			> * {
+				padding-bottom: 1rem;
+			}
 			a {
 					margin-bottom: 1rem;
 
