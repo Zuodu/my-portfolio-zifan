@@ -90,7 +90,7 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs, isHome }) => {
 				typeof window !== `undefined` && window.localStorage.setItem("darkMode", !getDarkMode);
 				setDarkMode(!getDarkMode);
 				typeof window !== `undefined` && window.document.location.reload();
-			}} plain fontSize={3} icon={getThemeIcon(getDarkMode)} tooltip={{text: 'Page refresh !', placement: 'right'}}
+			}} plain fontSize={3} icon={getThemeIcon(getDarkMode)} tooltip={{text: 'Work in progress !', placement: 'right'}}
 			/>
 		</Wrapper>
 	);

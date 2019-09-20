@@ -177,63 +177,42 @@ export const GlobalStyle = createGlobalStyle`
       font: inherit;
     }
     h1 {
-    	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
       margin: 3rem 0 0;
       color: inherit;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
-      font-size: 2.25rem;
       line-height: 1.1;
     }
     h2 {
-      font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
       margin: 2.45rem 0 0;
       color: inherit;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
-      font-size: 1.62671rem;
       line-height: 1.1;
     }
     h3 {
-    	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
       margin: 2.45rem 0 0;
       color: inherit;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
       font-size: 1.38316rem;
       line-height: 1.1;
     }
     h4 {
-    	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
       margin: 2.45rem 0 0;
       color: inherit;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
       font-size: 1rem;
       line-height: 1.1;
     }
     h5 {
-    	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
       margin: 1.45rem 0 0 ;
       color: inherit;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
       font-size: 0.85028rem;
       line-height: 1.1;
     }
     h6 {
-    	font-family: 'Arvo', Futura, sans-serif;
       padding: 0;
       margin: 1.45rem 0 0;
       color: inherit;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
-      font-size: 0.78405rem;
       line-height: 1.1;
     }
     hgroup {
@@ -433,7 +412,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arvo', Helvetica, sans-serif;
       background-color: ${props => props.theme.colors.background};
       color: ${props => props.theme.colors.text.main};
       font-weight: normal;

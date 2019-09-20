@@ -4,13 +4,13 @@ export const emphasizedControlHeight = 48;
 export const breakpoints = [576, 768, 992, 1200];
 
 export const space = [
-  2,
-  4,
-  12,
-  20,
-  defaultControlHeight,
-  emphasizedControlHeight,
-  128,
+	2,
+	4,
+	12,
+	20,
+	defaultControlHeight,
+	emphasizedControlHeight,
+	128,
 ];
 
 export const fontSizes = [10, 16, 18, 24, 28, 32, 40, 48, 52];
