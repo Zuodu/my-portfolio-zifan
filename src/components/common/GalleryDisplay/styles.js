@@ -3,7 +3,7 @@ import { Container } from 'rendition';
 import Img from 'gatsby-image';
 
 export const Wrapper = styled.div`
-  margin: 0 auto;
+  margin: 1rem auto 2rem auto;
   width: 100%;
   padding: 0;
   color: ${props => props.theme.colors.white};
@@ -32,7 +32,7 @@ export const Grid = styled.div`
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 8fr;
-  gap: 1.5rem 1.5rem;
+  gap: 2.5rem 2.5rem;
 
   @media (max-width: 960px) {
     grid-template-columns: repeat(2, 1fr);

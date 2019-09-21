@@ -24,7 +24,6 @@ module.exports = {
     "J'ai accumulé des expériences professionnelles en France et au Japon sous forme de stages en entreprise. J'ai également réalisé des travaux de recherche en laboratoire à l'Université de Tokyo. " +
     "Je suis confiant en mes compétences de développement logiciel, management de projets et en communication.",
 	about3: 'Etant né en Chine et ayant grandi en France, je maîtrise le Français, l\'Anglais, le Chinois et le Japonais tout en continuant à apprendre l`Allemand.',
-	about4: 'Si mon profil vous intéresse, jetez un oeil à mon CV :',
 	seeResume: 'Voir mon CV',
 	contactTitle: 'Faisons connaissance !',
 	projectType: 'Type de projet',

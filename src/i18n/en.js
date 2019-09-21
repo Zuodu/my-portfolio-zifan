@@ -25,7 +25,6 @@ module.exports = {
     'I gained proven skills in software development, project management and communication.',
 	about3:
     'Born in China and grew up in France, I am proficient in French, Chinese, English and Japanese. I have also basics in German.',
-	about4: 'If my profile interests you, feel free to take a look at my resume :',
 	seeResume: 'See my resume',
 	contactTitle: "Let's get acquainted !",
 	projectType: 'Project type',

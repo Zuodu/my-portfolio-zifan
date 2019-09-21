@@ -23,14 +23,13 @@ export default props => (
 				</Heading.h1>
 				<Box style={{ textAlign: 'justify' }} pb={5}>
 					<Txt>
-            When I have free time, I enjoy taking pictures with my SONY Alpha
+            During my free time, I enjoy taking pictures with my SONY Alpha
             III. I have since a few years collected several lenses. I love
-            macrophotography and I try to learn the basics nowadays. When
-            travelling, I usually bring my camera with me so i can take some
-            surprinsingly good shots !
+            macrophotography and I try to learn the basics. When
+            travelling, I usually bring my camera with me during travels so I can take some nice shots!
 					</Txt>
 					<Txt pt={2}>
-            If you are interested by the photos in the gallery, please feel free
+            If you are interested by photos in this gallery, please feel free
             to contact me !
 					</Txt>
 				</Box>
@@ -60,7 +59,7 @@ export default props => (
 			zIndex={2}
 		>
 			<ContentWrapper>
-				<GalleryDisplay cat="everythingelse" lang="en" />
+				<GalleryDisplay cat="stuffs" lang="en" />
 			</ContentWrapper>
 		</GalleryWrapper>
 		<ContentWrapper />

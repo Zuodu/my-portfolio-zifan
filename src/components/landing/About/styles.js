@@ -23,6 +23,7 @@ export const Details = styled.div`
   flex: 1;
   text-justify: auto;
   padding-left: 2rem;
+  text-align: justify;
 
   @media (max-width: 960px) {
     padding-left: unset;

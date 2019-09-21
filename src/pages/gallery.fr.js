@@ -26,11 +26,11 @@ export default props => (
             À mes heures perdues, je me consacre à la photographie. J'ai comme
             appareil un SONY Alpha III avec plusieurs optiques. J'adore la
             macrophotographie et j'apprends petit à petit comment réaliser de
-            belles prises. Je me balade aussi avec mon appareil lors des voyages
-            et j'en profite pour prendre des prises sympas.
+            belles prises avec un objectif macro. Je me balade aussi avec mon appareil lors des voyages
+            et j'en profite pour prendre des clichés sympas.
 					</Txt>
 					<Txt pt={2}>
-            Si les photos de cette galerie vous intéressent, contactez moi via
+            Si les photos de cette galerie vous intéressent, contactez-moi via
             la page contact !
 					</Txt>
 				</Box>
@@ -56,11 +56,11 @@ export default props => (
 		</GalleryWrapper>
 		<GalleryWrapper
 			bgImage="/illustrations/squares.svg"
-			bgColor="#787878"
+			bgColor="#1f2b28"
 			zIndex={2}
 		>
 			<ContentWrapper>
-				<GalleryDisplay cat="everythingelse" lang="fr" />
+				<GalleryDisplay cat="stuffs" lang="fr" />
 			</ContentWrapper>
 		</GalleryWrapper>
 		<ContentWrapper />

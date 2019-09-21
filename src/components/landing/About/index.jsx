@@ -32,11 +32,10 @@ export const About = ({ lang }) => (
 					</Thumbnail>
 					<Details>
 						<Heading.h3 mb={3}><FormattedMessage id="welcome" /></Heading.h3>
-						<Txt fontSize={2} m={1}><FormattedMessage id="thanks" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about1" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about2" /></Txt>
 						<Txt fontSize={2} m={1}><FormattedMessage id="about3" /></Txt>
-						<Txt fontSize={2} m={1}><FormattedMessage id="about4" /></Txt>
+						<Txt fontSize={2} m={1}><FormattedMessage id="thanks" /></Txt>
 						<Button info href={`/${lang}/resume/${configData.resumeFileName}`} mt={3}>
 							<FormattedMessage id="seeResume" />
 						</Button>

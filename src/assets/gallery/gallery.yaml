@@ -1,21 +1,105 @@
-- image: './japan/nature.jpg'
+- image: './japan/japan-1.jpg'
   order: 1
-  title: Japan is great
-  fr: description française
-  en: english description
-  date: 12 2019
+  title: Fuji-san
+  fr: Le mont Fuji depuis les hauteurs de Takao. Symbole du Japon, on le retrouve dans plein de références culturelles.
+  en: Fuji mountain from the high viewpoint of Takao. Symbol of Japan, it is found in many cultural references.
+  date: 11 2018
   category: japan
-- image: './japan/nature.jpg'
+- image: './japan/japan-2.jpg'
   order: 2
-  title: This is fun
-  fr: description française
-  en: english description
-  date: 12 2019
+  title: Salaryman
+  fr: Un employé de bureau japonais défile l'allée à toute allure.
+  en: A japanese salaryman swiftly walks across the street.
+  date: 03 2019
   category: japan
-- image: './japan/nature.jpg'
+- image: './japan/japan-3.jpg'
   order: 3
-  title: another one
-  fr: description française
-  en: english description
-  date: 12 2019
+  title: Tokyo Tower
+  fr: La tour de Tokyo vue depuis la Skytree.
+  en: The Tokyo Tower viewed from the Skytree.
+  date: 04 2019
   category: japan
+- image: './japan/japan-4.jpg'
+  order: 4
+  title: Furisode
+  fr: Le Furisode est porté pour la cérémonie de passage à l'âge adulte au Japon. C'est un kimono de grande noblesse porté uniquement durant les cérémonies.
+  en: The Furisode is worn during the Coming of Age Day in Japan. It is a kimono of great value and is only worn for ceremonies.
+  date: 09 2019
+  category: japan
+- image: './japan/japan-5.jpg'
+  order: 5
+  title: Takin' a smoke
+  fr: Le nombre de personnes âgées augmente cruellement au Japon et beaucoup vivent dans la solitude.
+  en: The elderly population in Japan is still brutally growing and they don't have a choice but to live alone.
+  date: 03 2019
+  category: japan
+- image: './japan/japan-6.jpg'
+  order: 6
+  title: Cherry Blossoms
+  fr: Les fleurs de cerisiers sont très appréciées des japonais. On ne peut les admirer que durant quelques semaines en Avril.
+  en: Cherry blossoms are highly cherished by japanese people. We can only admire them during April.
+  date: 04 2019
+  category: japan
+- image: './macro/macro-1.jpg'
+  order: 1
+  title: Daisy
+  fr: Une pâquerette en fleur.
+  en: A daisy in blossom.
+  date: 07 2018
+  category: macro
+- image: './macro/macro-2.jpg'
+  order: 2
+  title: Violet
+  fr: Quelques violettes.
+  en: Some violets.
+  date: 07 2019
+  category: macro
+- image: './macro/macro-3.jpg'
+  order: 3
+  title: Dahlia
+  fr: Une dahlia en détail.
+  en: A dahlia in details.
+  date: 07 2019
+  category: macro
+- image: './stuffs/stuffs-1.jpg'
+  order: 1
+  title: Grandmother
+  fr: Le portrait de ma grand-mère, quelqu'un que je respecte et aime énormément ♥️.
+  en: Portrait of my grandmother, whom I love and respect very much ♥️.
+  date: 09 2017
+  category: stuffs
+- image: './stuffs/stuffs-2.jpg'
+  order: 2
+  title: Flags
+  fr: Des guirlandes de fanions colorées aux bords d'un lac.
+  en: Garlands of colorful flags in front of a lake.
+  date: 11 2019
+  category: stuffs
+- image: './stuffs/stuffs-3.jpg'
+  order: 3
+  title: Shelves
+  fr: Des armoires remplies de livres dans un salon de thé en plein coeur de Paris.
+  en: Shelves full of old books in a tea house in the dead center of Paris.
+  date: 08 2017
+  category: stuffs
+- image: './stuffs/stuffs-4.jpg'
+  order: 4
+  title: La dame de fer
+  fr: La structure de la tour Eiffel vue d'en dessous.
+  en: Eiffel tower's structure viewed from below.
+  date: 08 2017
+  category: stuffs
+- image: './stuffs/stuffs-5.jpg'
+  order: 5
+  title: Hangzhou
+  fr: Les berges du lac de Hangzhou, en Chine.
+  en: The banks of Hangzhou's lake, in China.
+  date:
+  category: stuffs
+- image: './stuffs/stuffs-6.jpg'
+  order: 6
+  title: Lost
+  fr: Perdu dans ses pensées devant la mer.
+  en: Lost in thoughts in front of the sea.
+  date: 12 2019
+  category: stuffs
