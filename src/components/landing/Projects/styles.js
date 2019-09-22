@@ -30,9 +30,8 @@ export const Item = styled.div`
     margin-top: ${props => props.theme.space[1]}px;
     margin-bottom: ${props => props.theme.space[3]}px;
   }
-
-  p {
-    color: ${props => props.theme.colors.text.light};
+  small {
+  color: ${props => props.theme.colors.text.light};
   }
 `;
 

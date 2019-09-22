@@ -17,6 +17,7 @@ export const Projects = ({ hideTitle, lang }) => {
 													order
                           title
                           subtitle
+													worktype
                           tags
                       }
                       fields {
@@ -50,7 +51,7 @@ export const Projects = ({ hideTitle, lang }) => {
 							<Content>
 								<h4>{node.frontmatter.title}</h4>
 								<p>{node.frontmatter.subtitle}</p>
-								<small>ehehe</small>
+								<small>{node.frontmatter.worktype}</small>
 							</Content>
 							<Stats>
 								{node.frontmatter.tags.map(tag => (

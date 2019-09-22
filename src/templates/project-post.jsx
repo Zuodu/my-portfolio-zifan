@@ -54,10 +54,10 @@ export default function Template(props) {
 						<Heading.h3 pb={3}>{frontmatter.subtitle}</Heading.h3>
 						<NonStretchedImage fluid={frontmatter.topImage.childImageSharp.fluid} />
 						<Description>
-							<p><FormattedMessage id="projectType" />:&nbsp;</p>
-							<p><FormattedMessage id="projectSkills" />:&nbsp;</p>
-							<p><FormattedMessage id="projectLocation" />:&nbsp;</p>
-							<p><FormattedMessage id="projectTime" />:&nbsp;</p>
+							<p><FormattedMessage id="projectType" />&nbsp;:&nbsp;{frontmatter.worktype}</p>
+							<p><FormattedMessage id="projectSkills" />&nbsp;:&nbsp;{frontmatter.skills}</p>
+							<p><FormattedMessage id="projectLocation" />&nbsp;:&nbsp;{frontmatter.location}</p>
+							<p><FormattedMessage id="projectTime" />&nbsp;:&nbsp;{frontmatter.totalPeriod}</p>
 						</Description>
 					</PostHead>
 					<ContentSection
@@ -83,6 +83,10 @@ export const pageQuery = graphql`
                 date(formatString: "MM/YYYY")
                 title
                 subtitle
+								worktype
+								skills
+								location
+								totalPeriod
                 topImage {
                     childImageSharp {
                         fluid(maxWidth: 590) {

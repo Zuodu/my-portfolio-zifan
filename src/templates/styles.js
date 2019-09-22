@@ -24,14 +24,14 @@ export const ProjectsPageWrapper = styled.article`
 `;
 
 export const Description = styled.div`
-  padding-top: ${props => props.theme.space[3]}px;
-  padding-bottom: ${props => props.theme.space[5]}px;
+  padding-top: ${props => props.theme.space[4]}px;
+  padding-bottom: ${props => props.theme.space[2]}px;
   width: 100%;
   p {
     font-size: ${props => props.theme.fontSizes[1]}px;
     margin: ${props => props.theme.space[1]}px 0 0
       ${props => props.theme.space[5]}px;
-    color: ${props => props.theme.colors.text.light};
+    color: ${props => props.theme.colors.text.main};
   }
 `;
 
@@ -54,6 +54,10 @@ export const ContentSection = styled.section`
   }
   table {
     border-color: ${props => props.theme.colors.text.light};
+  }
+  figcaption {
+  text-align: center;
+  font-style: italic;
   }
   .gatsby-resp-image-wrapper {
     box-shadow: 0 5px 10px -3px ${props => props.theme.colors.text.main};

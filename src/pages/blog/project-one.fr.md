@@ -5,7 +5,7 @@ subtitle: post un
 date: 2019-07-10
 directory: blog
 topImage: ../../assets/projects/portrait.jpg
-period: 6
+totalPeriod: 6 month
 tags:
   - Javascript
   - React
