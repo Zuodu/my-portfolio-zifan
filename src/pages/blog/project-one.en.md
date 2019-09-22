@@ -4,7 +4,7 @@ title: My First Post
 subtitle: post un
 date: 2019-07-10
 directory: blog
-topImage: ../../assets/projects/portrait.jpg
+topImage: ../../assets/projects/top.png
 totalPeriod: 6 month
 tags:
   - Javascript
