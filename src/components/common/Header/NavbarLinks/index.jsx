@@ -86,7 +86,7 @@ const NavbarLinks = ({ desktop, getDarkMode, setDarkMode, langs, isHome }) => {
 				<SelectLanguage langs={langs} />
 				<div />
 			</DropDownButton>
-			<Button name="darkmode" onClick={() => {
+			<Button aria-label="Darkmode" onClick={() => {
 				typeof window !== `undefined` && window.localStorage.setItem("darkMode", !getDarkMode);
 				setDarkMode(!getDarkMode);
 				typeof window !== `undefined` && window.document.location.reload();
