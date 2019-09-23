@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "private": true,
-  "description": "My portfolio @ zifan.fr",
-  "version": "1.1.2",
+  "description": "A simple portfolio for developers",
+  "version": "1.1.0",
   "author": "Zifan <contact@zifan.fr>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
@@ -78,6 +78,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:zuodu/my-portfolio-zifan.git"
+    "url": "git@github.com:smakosh/gatsby-portfolio-dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smakosh/gatsby-portfolio-dev/issues"
   }
 }

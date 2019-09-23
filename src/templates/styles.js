@@ -55,12 +55,6 @@ export const ContentSection = styled.section`
   table {
     border-color: ${props => props.theme.colors.text.light};
   }
-  ul {
-    margin-top: ${props => props.theme.space[2]}px;
-  }
-  ol {
-    margin-top: ${props => props.theme.space[2]}px;
-  }
   figcaption {
   text-align: center;
   font-style: italic;
