@@ -1,18 +1,18 @@
 ---
 order: 3
-title: Optimod'IF
-subtitle: Software development with AGILE methodology
+title: An AI for Gomoku
+subtitle: Building an AI with Prolog
 date: 2019-09-10
 directory: projects
 worktype: school project
-skills: Java programming, Algorithms, AGILE
+skills: Prolog scripting, algorithms, teamwork
 location: France
 totalPeriod: 4 weeks
 topImage: ../../assets/projects/top.png
 tags:
-  - Java
-  - Algorithms
-  - AGILE
+  - Prolog
+  - AI
+  - Teamwork
 ---
 
 ## Content coming soon !
