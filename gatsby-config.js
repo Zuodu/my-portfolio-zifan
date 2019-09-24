@@ -21,8 +21,21 @@ module.exports = {
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-netlify',
-		'gatsby-plugin-offline',
 		'gatsby-transformer-yaml',
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Portfolio Zifan`,
+				short_name: `Portfolio Zifan`,
+				description: `My personal blog and portfolio`,
+				start_url: `/`,
+				background_color: `#fbfbfb`,
+				theme_color: `#4391F9`,
+				display: `standalone`,
+				icon: `static/favicon/favicon-512.png`,
+			},
+		},
+		'gatsby-plugin-offline',
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
@@ -135,24 +148,6 @@ module.exports = {
 			options: {
 				trackingId: config.googleAnalyticsID,
 				head: true,
-			},
-		},
-		{
-			resolve: 'gatsby-plugin-favicon',
-			options: {
-				logo: './static/favicon/favicon-512.png',
-				injectHTML: true,
-				icons: {
-					android: true,
-					appleIcon: true,
-					appleStartup: true,
-					coast: false,
-					favicons: true,
-					firefox: true,
-					twitter: false,
-					yandex: false,
-					windows: false,
-				},
 			},
 		},
 		{
